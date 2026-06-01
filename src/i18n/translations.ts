@@ -117,7 +117,8 @@ export const translations: Record<Locale, Translation> = {
     hero: {
       available: "Available for projects",
       hi: "Hi, I'm",
-      subtitle: "Computer Science student passionate about technology.",
+      subtitle:
+        "IT professional and software developer passionate about technology.",
       description:
         "I focus on building real-world technological solutions using web development, IoT, automation, and software engineering.",
       hireMe: "Hire Me",
@@ -144,7 +145,7 @@ export const translations: Record<Locale, Translation> = {
       title: "About",
       highlight: "Me",
       intro:
-        "I am Zilton Tuaire Abdul, a Computer Science student passionate about technology and innovation.",
+        "I am Zilton Tuaire Abdul, an IT professional and software developer passionate about technology and innovation.",
       interestsTitle: "I have experience and interest in:",
       interests: [
         "Web development systems",
@@ -155,7 +156,7 @@ export const translations: Record<Locale, Translation> = {
       closing:
         "I enjoy building solutions that solve real problems using modern technologies.",
       cardSummary:
-        "Computer Science student passionate about technology, web systems, IoT, automation, and AI.",
+        "IT professional and software developer passionate about technology, web systems, IoT, automation, and AI.",
     },
     skills: {
       title: "My",
@@ -411,7 +412,7 @@ export const translations: Record<Locale, Translation> = {
       available: "Disponible pour des projets",
       hi: "Bonjour, je suis",
       subtitle:
-        "Étudiant en informatique passionné par la technologie, axé sur des solutions réelles à fort impact.",
+        "Informaticien et développeur de logiciels passionné par la technologie, axé sur des solutions réelles à fort impact.",
       description:
         "Je me concentre sur la création de solutions technologiques concrètes en développement web, IoT, automatisation et ingénierie logicielle.",
       hireMe: "M'embaucher",
@@ -438,7 +439,7 @@ export const translations: Record<Locale, Translation> = {
       title: "À",
       highlight: "propos",
       intro:
-        "Je suis Zilton Tuaire Abdul, étudiant en informatique passionné par la technologie et l'innovation.",
+        "Je suis Zilton Tuaire Abdul, informaticien et développeur de logiciels passionné par la technologie et l'innovation.",
       interestsTitle: "J'ai de l'expérience et de l'intérêt pour :",
       interests: [
         "Systèmes de développement web",
@@ -449,7 +450,7 @@ export const translations: Record<Locale, Translation> = {
       closing:
         "J'aime créer des solutions qui résolvent de vrais problèmes avec des technologies modernes.",
       cardSummary:
-        "Étudiant en informatique passionné par la technologie, le web, l'IoT, l'automatisation et l'IA.",
+        "Informaticien et développeur de logiciels passionné par la technologie, le web, l'IoT, l'automatisation et l'IA.",
     },
     skills: {
       title: "Mes",

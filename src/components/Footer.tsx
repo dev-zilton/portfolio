@@ -37,7 +37,7 @@ export function Footer({ scrollToSection }: FooterProps) {
           ))}
         </nav>
         <p className="text-copy-muted">
-          © 2024 {staticPortfolio.name}. {t.footer.rights}
+          © 2026 {staticPortfolio.name}. {t.footer.rights}
         </p>
         <p className="text-sm text-copy-muted/70">{t.footer.built}</p>
       </div>
