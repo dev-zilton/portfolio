@@ -14,7 +14,7 @@ import { useLanguage, useProjectsWithLinks } from "./i18n/LanguageContext";
 const SECTION_IDS = ["home", "about", "skills", "projects", "contact"] as const;
 
 function PortfolioContent() {
-  const { t, locale } = useLanguage();
+  const { t } = useLanguage();
   const projects = useProjectsWithLinks();
   const [activeSection, setActiveSection] = useState("home");
 
@@ -58,14 +58,8 @@ function PortfolioContent() {
         <section id="about" className="px-4 py-20 md:px-6">
           <div className="mx-auto max-w-7xl">
             <SectionHeading
-              title={
-                locale === "pt"
-                  ? "Sobre Mim & Educação"
-                  : locale === "fr"
-                    ? "À propos & Formation"
-                    : "About & Education"
-              }
-              highlight={t.about.highlight}
+              title={t.aboutSection.title}
+              highlight={t.aboutSection.highlight}
               className="mb-10"
             />
 
@@ -98,11 +92,7 @@ function PortfolioContent() {
               <div className="space-y-4">
                 <div>
                   <h4 className="mb-4 text-sm font-semibold text-white">
-                    {locale === "pt"
-                      ? "Formação"
-                      : locale === "fr"
-                        ? "Formation"
-                        : "Education"}
+                    {t.aboutSection.educationLabel}
                   </h4>
                   <div className="space-y-3">
                     {t.education.items.map((edu) => (
@@ -127,11 +117,7 @@ function PortfolioContent() {
 
                 <div>
                   <h4 className="mb-3 text-sm font-semibold text-white">
-                    {locale === "pt"
-                      ? "Certificados"
-                      : locale === "fr"
-                        ? "Certificats"
-                        : "Certificates"}
+                    {t.aboutSection.certificatesLabel}
                   </h4>
                   <ul className="list-disc list-inside space-y-2 text-sm text-copy-muted">
                     {t.certificates.items.map((c) => (

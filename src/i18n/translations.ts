@@ -45,6 +45,12 @@ export type Translation = {
     closing: string;
     cardSummary: string;
   };
+  aboutSection: {
+    title: string;
+    highlight: string;
+    educationLabel: string;
+    certificatesLabel: string;
+  };
   skills: {
     title: string;
     highlight: string;
@@ -101,7 +107,7 @@ export type Translation = {
   };
 };
 
-const school = "Universidade Técnica Eugénio Diogo Guilande";
+const school = "Universidade Técnica Diogo Eugénio Guilande (UTDEG)";
 
 export const translations: Record<Locale, Translation> = {
   en: {
@@ -158,6 +164,12 @@ export const translations: Record<Locale, Translation> = {
       cardSummary:
         "IT professional and software developer passionate about technology, web systems, IoT, automation, and AI.",
     },
+    aboutSection: {
+      title: "About &",
+      highlight: "Education",
+      educationLabel: "Education",
+      certificatesLabel: "Certificates",
+    },
     skills: {
       title: "My",
       highlight: "Skills",
@@ -208,14 +220,14 @@ export const translations: Record<Locale, Translation> = {
         {
           degree: "Bachelor's Degree in Computer Science",
           school,
-          description: "Higher education in Computer Science",
-          year: "2022 - 2025",
+          description: "Information Systems programme — Matola, Mozambique",
+          year: "2022 – 2026",
         },
         {
           degree: "Python Programming",
           school: "Coursera / Udemy",
-          description: "Python development certifications",
-          year: "2022 - 2023",
+          description: "Online courses and certifications in Python development",
+          year: "2022 – 2023",
         },
       ],
     },
@@ -292,18 +304,24 @@ export const translations: Record<Locale, Translation> = {
       title: "Sobre",
       highlight: "Mim",
       intro:
-        "Sou Zilton Tuaire Abdul, Informático e desenvolvedor de softwares apaixonado por tecnologia e inovação.",
+        "Sou Zilton Tuaire Abdul, licenciando em Informática e desenvolvedor de software apaixonado por tecnologia e inovação.",
       interestsTitle: "Tenho experiência e interesse em:",
       interests: [
-        "Sistemas de desenvolvimento web",
+        "Desenvolvimento web e aplicações modernas",
         "Automação e IoT (Internet das Coisas)",
-        "Projetos académicos e práticos de software",
+        "Projetos académicos e soluções para o mercado real",
         "Fundamentos de Inteligência Artificial",
       ],
       closing:
-        "Gosto de criar soluções que resolvem problemas reais com tecnologias modernas.",
+        "Gosto de criar soluções que resolvem problemas reais com tecnologias actuais e boas práticas de engenharia.",
       cardSummary:
-        "Informático e desenvolvedor de softwares apaixonado por tecnologia, sistemas web, IoT, automação e IA.",
+        "Licenciando em Informática e desenvolvedor de software com foco em web, IoT, automação e IA.",
+    },
+    aboutSection: {
+      title: "Sobre Mim &",
+      highlight: "Educação",
+      educationLabel: "Formação académica",
+      certificatesLabel: "Certificados",
     },
     skills: {
       title: "As minhas",
@@ -355,14 +373,14 @@ export const translations: Record<Locale, Translation> = {
         {
           degree: "Licenciatura em Informática",
           school,
-          description: "Ensino superior em Informática",
-          year: "2022 - 2025",
+          description: "Formação em Sistemas Informáticos — Matola, Moçambique",
+          year: "2022 – 2026",
         },
         {
           degree: "Programação Python",
           school: "Coursera / Udemy",
-          description: "Certificações em desenvolvimento Python",
-          year: "2022 - 2023",
+          description: "Cursos e certificações em desenvolvimento Python",
+          year: "2022 – 2023",
         },
       ],
     },
@@ -370,10 +388,10 @@ export const translations: Record<Locale, Translation> = {
       title: "Os meus",
       highlight: "Certificados",
       items: [
-        "Python Fundamentals - Coursera",
+        "Fundamentos de Python — Coursera",
         "Desenvolvimento Web com React",
-        "Introdução à IoT - Arduino",
-        "Git & GitHub Essentials",
+        "Introdução à IoT com Arduino",
+        "Essenciais de Git e GitHub",
       ],
     },
     contact: {
@@ -452,6 +470,12 @@ export const translations: Record<Locale, Translation> = {
       cardSummary:
         "Informaticien et développeur de logiciels passionné par la technologie, le web, l'IoT, l'automatisation et l'IA.",
     },
+    aboutSection: {
+      title: "À propos &",
+      highlight: "Formation",
+      educationLabel: "Formation académique",
+      certificatesLabel: "Certificats",
+    },
     skills: {
       title: "Mes",
       highlight: "Compétences",
@@ -502,14 +526,14 @@ export const translations: Record<Locale, Translation> = {
         {
           degree: "Licence en informatique",
           school,
-          description: "Enseignement supérieur en informatique",
-          year: "2022 - 2025",
+          description: "Systèmes informatiques — Matola, Mozambique",
+          year: "2022 – 2026",
         },
         {
           degree: "Programmation Python",
           school: "Coursera / Udemy",
-          description: "Certifications en développement Python",
-          year: "2022 - 2023",
+          description: "Cours et certifications en développement Python",
+          year: "2022 – 2023",
         },
       ],
     },
