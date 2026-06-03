@@ -165,7 +165,7 @@ export const translations: Record<Locale, Translation> = {
         "IT professional and software developer passionate about technology, web systems, IoT, automation, and AI.",
     },
     aboutSection: {
-      title: "About &",
+      title: "About me &",
       highlight: "Education",
       educationLabel: "Education",
       certificatesLabel: "Certificates",
@@ -226,7 +226,8 @@ export const translations: Record<Locale, Translation> = {
         {
           degree: "Python Programming",
           school: "Coursera / Udemy",
-          description: "Online courses and certifications in Python development",
+          description:
+            "Online courses and certifications in Python development",
           year: "2022 – 2023",
         },
       ],
@@ -260,7 +261,6 @@ export const translations: Record<Locale, Translation> = {
       projects: "Projects",
       contact: "Contact",
       rights: "All rights reserved.",
-      built: "Built with React + Tailwind CSS",
     },
   },
   pt: {
@@ -413,7 +413,6 @@ export const translations: Record<Locale, Translation> = {
       projects: "Projetos",
       contact: "Contacto",
       rights: "Todos os direitos reservados.",
-      built: "Desenvolvido com React + Tailwind CSS",
     },
   },
   fr: {
