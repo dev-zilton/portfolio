@@ -261,6 +261,7 @@ export const translations: Record<Locale, Translation> = {
       projects: "Projects",
       contact: "Contact",
       rights: "All rights reserved.",
+      built: "Built with React + Tailwind CSS",
     },
   },
   pt: {
@@ -413,6 +414,7 @@ export const translations: Record<Locale, Translation> = {
       projects: "Projetos",
       contact: "Contacto",
       rights: "Todos os direitos reservados.",
+      built: "Criado com React + Tailwind CSS",
     },
   },
   fr: {
