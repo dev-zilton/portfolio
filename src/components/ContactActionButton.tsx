@@ -1,56 +1,77 @@
-import { useState, type ReactNode } from "react";
+import { useState, type ReactNode, useCallback } from "react";
 import { useLanguage } from "../i18n/LanguageContext";
 import type { ActionState } from "../types/ui";
+
+type ActionType = "link" | "download";
 
 type ContactActionButtonProps = {
   href: string;
   label: string;
   icon: string;
   variant?: "primary" | "default";
+  actionType?: ActionType;
+  downloadName?: string;
 };
 
-const RESET_MS = 2200;
+const RESET_MS = 3000;
 
 export function ContactActionButton({
   href,
   label,
   icon,
   variant = "default",
+  actionType = "link",
+  downloadName,
 }: ContactActionButtonProps) {
   const { t } = useLanguage();
   const [state, setState] = useState<ActionState>("idle");
 
-  const runAction = async () => {
+  const isPrimary = variant === "primary";
+
+  const baseClass = isPrimary ? "btn-primary w-full" : "btn-secondary w-full";
+
+  const feedbackBase =
+    "inline-flex w-full items-center justify-center gap-2 rounded-xl px-6 py-3 font-bold transition-all duration-300 active:scale-[0.98] focus:outline-none focus:ring-2 focus:ring-turquoise-400/30";
+
+  const stateClasses: Record<ActionState, string> = {
+    idle: baseClass,
+    loading: `${baseClass} opacity-80 cursor-wait`,
+    success: `${feedbackBase} border border-emerald-500/50 bg-emerald-500/15 text-emerald-300`,
+    error: `${feedbackBase} border border-red-500/50 bg-red-500/15 text-red-300`,
+  };
+
+  const runAction = useCallback(async () => {
     if (state !== "idle") return;
 
     setState("loading");
-    try {
-      await new Promise((resolve) => setTimeout(resolve, 700));
 
-      if (href === "#") {
-        throw new Error("Link unavailable");
+    try {
+      await new Promise((r) => setTimeout(r, 500));
+
+      if (!href || href === "#") {
+        throw new Error("Invalid link");
       }
 
-      window.open(href, "_blank", "noopener,noreferrer");
+      // 📄 DOWNLOAD
+      if (actionType === "download") {
+        const link = document.createElement("a");
+        link.href = href;
+        link.download = downloadName ?? "";
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      } else {
+        // 🔗 EXTERNAL LINK
+        window.open(href, "_blank", "noopener,noreferrer");
+      }
+
       setState("success");
     } catch {
       setState("error");
     } finally {
       window.setTimeout(() => setState("idle"), RESET_MS);
     }
-  };
-
-  const isPrimary = variant === "primary";
-  const baseClass = isPrimary ? "btn-primary w-full" : "btn-secondary w-full";
-
-  const stateClasses: Record<ActionState, string> = {
-    idle: baseClass,
-    loading: `${baseClass} opacity-90`,
-    success:
-      "inline-flex w-full items-center justify-center gap-2 rounded-xl border border-emerald-500/50 bg-emerald-500/15 px-6 py-3 font-bold text-emerald-300",
-    error:
-      "inline-flex w-full items-center justify-center gap-2 rounded-xl border border-red-500/50 bg-red-500/15 px-6 py-3 font-bold text-red-300",
-  };
+  }, [href, actionType, downloadName, state]);
 
   const content: Record<ActionState, ReactNode> = {
     idle: (
@@ -61,6 +82,7 @@ export function ContactActionButton({
         <span>{label}</span>
       </>
     ),
+
     loading: (
       <>
         <span
@@ -70,17 +92,19 @@ export function ContactActionButton({
         <span>{t.contact.connecting}</span>
       </>
     ),
+
     success: (
       <>
-        <span className="text-xl" aria-hidden>
+        <span aria-hidden className="text-xl">
           ✓
         </span>
         <span>{t.contact.success}</span>
       </>
     ),
+
     error: (
       <>
-        <span className="text-xl" aria-hidden>
+        <span aria-hidden className="text-xl">
           ✕
         </span>
         <span>{t.contact.error}</span>
@@ -93,9 +117,9 @@ export function ContactActionButton({
       type="button"
       onClick={runAction}
       disabled={state === "loading"}
-      aria-live="polite"
       aria-busy={state === "loading"}
-      className={`${stateClasses[state]} transition-all duration-300`}
+      aria-label={label}
+      className={stateClasses[state]}
     >
       {content[state]}
     </button>
