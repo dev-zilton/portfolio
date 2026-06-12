@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Moon, Sun } from "lucide-react";
 import { staticPortfolio } from "../data/portfolio";
 import { useLanguage } from "../i18n/LanguageContext";
 import { LanguageSwitcher } from "./LanguageSwitcher";
@@ -7,9 +8,16 @@ import { PrimaryButton } from "./ui/PrimaryButton";
 type NavbarProps = {
   activeSection: string;
   scrollToSection: (id: string) => void;
+  isDark: boolean;
+  onToggleTheme: () => void;
 };
 
-export function Navbar({ activeSection, scrollToSection }: NavbarProps) {
+export function Navbar({
+  activeSection,
+  scrollToSection,
+  isDark,
+  onToggleTheme,
+}: NavbarProps) {
   const { t } = useLanguage();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -25,7 +33,6 @@ export function Navbar({ activeSection, scrollToSection }: NavbarProps) {
     setIsMenuOpen(false);
   };
 
-  // ESC to close menu
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
       if (e.key === "Escape") setIsMenuOpen(false);
@@ -35,7 +42,7 @@ export function Navbar({ activeSection, scrollToSection }: NavbarProps) {
   }, []);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-surface/90 backdrop-blur-xl">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-surface/90 backdrop-blur-xl transition-colors duration-300">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6">
         {/* LOGO */}
         <button
@@ -57,9 +64,7 @@ export function Navbar({ activeSection, scrollToSection }: NavbarProps) {
               key={id}
               type="button"
               onClick={() => handleNav(id)}
-              className={`nav-link ${
-                activeSection === id ? "nav-link-active" : ""
-              }`}
+              className={`nav-link ${activeSection === id ? "nav-link-active" : ""}`}
             >
               {navLabels[id]}
             </button>
@@ -69,6 +74,30 @@ export function Navbar({ activeSection, scrollToSection }: NavbarProps) {
         {/* ACTIONS */}
         <div className="flex items-center gap-2 md:gap-3">
           <LanguageSwitcher className="hidden sm:flex" />
+
+          {/* BOTÃO DARK / LIGHT */}
+          <button
+            type="button"
+            onClick={onToggleTheme}
+            aria-label={
+              isDark ? "Mudar para modo claro" : "Mudar para modo escuro"
+            }
+            className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/15 bg-white/5 text-copy transition-all duration-200 hover:bg-white/10 hover:border-turquoise-400/50"
+          >
+            {isDark ? (
+              <Sun
+                size={16}
+                className="text-turquoise-300"
+                aria-hidden="true"
+              />
+            ) : (
+              <Moon
+                size={16}
+                className="text-turquoise-300"
+                aria-hidden="true"
+              />
+            )}
+          </button>
 
           <PrimaryButton
             className="hidden !py-2 text-sm md:inline-flex"
@@ -87,19 +116,13 @@ export function Navbar({ activeSection, scrollToSection }: NavbarProps) {
             onClick={() => setIsMenuOpen((v) => !v)}
           >
             <span
-              className={`h-0.5 w-5 bg-copy transition-all duration-300 ${
-                isMenuOpen ? "translate-y-2 rotate-45" : ""
-              }`}
+              className={`h-0.5 w-5 bg-copy transition-all duration-300 ${isMenuOpen ? "translate-y-2 rotate-45" : ""}`}
             />
             <span
-              className={`h-0.5 w-5 bg-copy transition-opacity duration-300 ${
-                isMenuOpen ? "opacity-0" : "opacity-100"
-              }`}
+              className={`h-0.5 w-5 bg-copy transition-opacity duration-300 ${isMenuOpen ? "opacity-0" : "opacity-100"}`}
             />
             <span
-              className={`h-0.5 w-5 bg-copy transition-all duration-300 ${
-                isMenuOpen ? "-translate-y-2 -rotate-45" : ""
-              }`}
+              className={`h-0.5 w-5 bg-copy transition-all duration-300 ${isMenuOpen ? "-translate-y-2 -rotate-45" : ""}`}
             />
           </button>
         </div>
@@ -122,9 +145,7 @@ export function Navbar({ activeSection, scrollToSection }: NavbarProps) {
                 key={id}
                 type="button"
                 onClick={() => handleNav(id)}
-                className={`nav-link w-fit py-3 text-left text-lg ${
-                  activeSection === id ? "nav-link-active" : ""
-                }`}
+                className={`nav-link w-fit py-3 text-left text-lg ${activeSection === id ? "nav-link-active" : ""}`}
               >
                 {navLabels[id]}
               </button>

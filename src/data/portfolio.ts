@@ -3,37 +3,25 @@ export const staticPortfolio = {
   firstName: "Zilton",
 
   skills: [
-    { name: "Python", level: 90, icon: "🐍" },
-    { name: "Java (Swing)", level: 85, icon: "☕" },
-    { name: "React", level: 70, icon: "⚛️" },
-    { name: "Tailwind CSS", level: 75, icon: "🎨" },
-    { name: "FastAPI", level: 65, icon: "🚀" },
-    { name: "PostgreSQL", level: 70, icon: "🗄️" },
-    { name: "Arduino / IoT", level: 80, icon: "🔌" },
-    { name: "Git & GitHub", level: 85, icon: "📚" },
+    { name: "Python", level: 90, icon: "python" },
+    { name: "Java (Swing)", level: 85, icon: "java" },
+    { name: "React", level: 70, icon: "react" },
+    { name: "Tailwind CSS", level: 75, icon: "tailwind" },
+    { name: "FastAPI", level: 65, icon: "fastapi" },
+    { name: "PostgreSQL", level: 70, icon: "postgresql" },
+    { name: "Arduino / IoT", level: 80, icon: "arduino" },
+    { name: "Git & GitHub", level: 85, icon: "git" },
   ],
 
   projects: [
-    {
-      id: "irrigation",
-      icon: "🌱",
-      link: "https://github.com/dev-zilton",
-    },
-    {
-      id: "rentcar",
-      icon: "🚗",
-      link: "https://github.com/dev-zilton",
-    },
+    { id: "irrigation", icon: "leaf", link: "https://github.com/dev-zilton" },
+    { id: "rentcar", icon: "car", link: "https://github.com/dev-zilton" },
     {
       id: "picasso",
-      icon: "🛒",
+      icon: "cart",
       link: "https://github.com/dev-zilton/SistemaVendasUnico.java",
     },
-    {
-      id: "github",
-      icon: "💻",
-      link: "https://github.com/dev-zilton",
-    },
+    { id: "github", icon: "code", link: "https://github.com/dev-zilton" },
   ],
 
   contacts: {

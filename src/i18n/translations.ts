@@ -221,7 +221,7 @@ export const translations: Record<Locale, Translation> = {
           degree: "Bachelor's Degree in Computer Science",
           school,
           description: "Information Systems programme — Matola, Mozambique",
-          year: "2022 – 2026",
+          year: "2022 – 2024",
         },
         {
           degree: "Python Programming",
@@ -373,9 +373,9 @@ export const translations: Record<Locale, Translation> = {
       items: [
         {
           degree: "Licenciatura em Informática",
-          school,
-          description: "Formação em Sistemas Informáticos — Matola, Moçambique",
-          year: "2022 – 2026",
+          school: "Universidade Técnica Diogo Eugénio Guilande (UTDEG)",
+          description: "Formação em Engenharia de Softwares — Matola, Moçambique",
+          year: "2022 – 2024",
         },
         {
           degree: "Programação Python",
@@ -528,7 +528,7 @@ export const translations: Record<Locale, Translation> = {
           degree: "Licence en informatique",
           school,
           description: "Systèmes informatiques — Matola, Mozambique",
-          year: "2022 – 2026",
+          year: "2022 – 2024",
         },
         {
           degree: "Programmation Python",

@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 export default {
+  darkMode: "class",
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
@@ -7,9 +8,22 @@ export default {
         sans: ["Inter", "system-ui", "sans-serif"],
       },
       colors: {
-        surface: "#0B1117",
-        "surface-elevated": "#0F172A",
-        copy: "#F3F4F6",
+        surface: {
+          DEFAULT: "#0B1117",
+          light: "#F8FAFC",
+        },
+        "surface-elevated": {
+          DEFAULT: "#0F172A",
+          light: "#FFFFFF",
+        },
+        copy: {
+          DEFAULT: "#F3F4F6",
+          light: "#111827",
+        },
+        "copy-muted": {
+          DEFAULT: "#9CA3AF",
+          light: "#6B7280",
+        },
         turquoise: {
           300: "#5eead4",
           400: "#2dd4bf",
