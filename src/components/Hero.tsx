@@ -1,4 +1,4 @@
-import profileImage from "../assets/profile.png";
+import profileImage from "../assets/profile.webp";
 import { staticPortfolio } from "../data/portfolio";
 import { useLanguage } from "../i18n/LanguageContext";
 import { PrimaryButton } from "./ui/PrimaryButton";
