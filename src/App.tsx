@@ -4,6 +4,8 @@ import { useTheme } from "./hooks/useTheme";
 import { Hero } from "./components/Hero";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
+import { ScrollProgressBar } from "./components/ScrollProgressBar";
+import { CustomCursor } from "./components/CustomCursor";
 
 const AboutSection = lazy(() => import("./sections/AboutSection"));
 const SkillsSection = lazy(() => import("./sections/SkillsSection"));
@@ -46,7 +48,9 @@ function PortfolioContent() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-surface dark:bg-surface font-sans transition-colors duration-300">
+    <div className="min-h-screen bg-surface dark:bg-surface font-sans transition-colors duration-300" style={{ cursor: "none" }}>
+      <ScrollProgressBar />
+      <CustomCursor />
       <Navbar
         activeSection={activeSection}
         scrollToSection={scrollToSection}
