@@ -18,11 +18,11 @@ export function Hero({ onContact }: HeroProps) {
     >
       {/* BACKGROUND LAYERS */}
       <ParticleBackground />
-      <div className="absolute inset-0 bg-gradient-to-b from-surface-elevated via-surface to-surface pointer-events-none" />
+      
       <div className="absolute top-1/4 left-1/2 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-turquoise-400/10 blur-[80px] pointer-events-none" />
       <div className="absolute right-0 top-1/3 h-[400px] w-[400px] rounded-full bg-accent-purple/10 blur-[60px] pointer-events-none" />
 
-      <div className="relative mx-auto w-full max-w-7xl" style={{ zIndex: 1 }}>
+      <div className="relative mx-auto w-full max-w-7xl" style={{ zIndex: 2 }}>
         <div className="grid items-center gap-12 md:grid-cols-2">
           {/* TEXT */}
           <div className="order-2 space-y-4 md:order-1">
