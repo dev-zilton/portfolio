@@ -87,7 +87,7 @@ export function ParticleBackground() {
   return (
     <canvas
       ref={canvasRef}
-      className="pointer-events-none absolute inset-0 h-full w-full"
+      className="pointer-events-none absolute inset-0 h-full w-full" style={{ zIndex: 0 }}
       aria-hidden="true"
     />
   );

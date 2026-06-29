@@ -1,5 +1,5 @@
 import profileImage from "../assets/profile.webp";
-import { ParticleBackground } from "./ParticleBackground";;
+import { ParticleBackground } from "./ParticleBackground";
 import { staticPortfolio } from "../data/portfolio";
 import { useLanguage } from "../i18n/LanguageContext";
 import { PrimaryButton } from "./ui/PrimaryButton";
@@ -22,7 +22,7 @@ export function Hero({ onContact }: HeroProps) {
       <div className="absolute top-1/4 left-1/2 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-turquoise-400/10 blur-[80px] pointer-events-none" />
       <div className="absolute right-0 top-1/3 h-[400px] w-[400px] rounded-full bg-accent-purple/10 blur-[60px] pointer-events-none" />
 
-      <div className="relative mx-auto w-full max-w-7xl">
+      <div className="relative mx-auto w-full max-w-7xl" style={{ zIndex: 1 }}>
         <div className="grid items-center gap-12 md:grid-cols-2">
           {/* TEXT */}
           <div className="order-2 space-y-4 md:order-1">
