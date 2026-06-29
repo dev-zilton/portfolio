@@ -96,7 +96,7 @@ export function Hero({ onContact }: HeroProps) {
                 <img
                   src={profileImage}
                   alt={staticPortfolio.name}
-                  className="h-full w-full scale-[1.08] object-cover object-[50%_38%] animate-float"
+                  className="h-full w-full scale-[1.08] object-cover object-[50%_38%] animate-float" loading="eager" fetchPriority="high" decoding="async"
                 />
               </div>
             </div>
