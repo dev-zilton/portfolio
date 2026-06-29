@@ -1,4 +1,5 @@
 import profileImage from "../assets/profile.webp";
+import { ParticleBackground } from "./ParticleBackground";;
 import { staticPortfolio } from "../data/portfolio";
 import { useLanguage } from "../i18n/LanguageContext";
 import { PrimaryButton } from "./ui/PrimaryButton";
@@ -16,6 +17,7 @@ export function Hero({ onContact }: HeroProps) {
       className="relative flex min-h-screen items-center overflow-hidden px-4 py-24 md:px-6"
     >
       {/* BACKGROUND LAYERS */}
+      <ParticleBackground />
       <div className="absolute inset-0 bg-gradient-to-b from-surface-elevated via-surface to-surface pointer-events-none" />
       <div className="absolute top-1/4 left-1/2 h-[600px] w-[600px] -translate-x-1/2 rounded-full bg-turquoise-400/10 blur-[80px] pointer-events-none" />
       <div className="absolute right-0 top-1/3 h-[400px] w-[400px] rounded-full bg-accent-purple/10 blur-[60px] pointer-events-none" />
