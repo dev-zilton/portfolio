@@ -35,8 +35,8 @@ export function ParticleBackground() {
         y: Math.random() * canvas.height,
         vx: (Math.random() - 0.5) * 0.4,
         vy: (Math.random() - 0.5) * 0.4,
-        radius: Math.random() * 1.5 + 0.5,
-        opacity: Math.random() * 0.6 + 0.2,
+        radius: Math.random() * 2 + 1,
+        opacity: Math.random() * 0.6 + 0.3,
       });
     }
 
@@ -66,7 +66,7 @@ export function ParticleBackground() {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(45, 212, 191, ${0.2 * (1 - dist / 120)})`;
+            ctx.strokeStyle = `rgba(45, 212, 191, ${0.25 * (1 - dist / 120)})`;
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
@@ -90,11 +90,12 @@ export function ParticleBackground() {
       aria-hidden="true"
       style={{
         position: "absolute",
-        inset: 0,
+        top: 0,
+        left: 0,
         width: "100%",
         height: "100%",
         pointerEvents: "none",
-        zIndex: 1,
+        zIndex: 2,
       }}
     />
   );
