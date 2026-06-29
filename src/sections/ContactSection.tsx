@@ -1,5 +1,6 @@
 import { MessageCircle, Mail } from "lucide-react";
 import { SectionHeading } from "../components/ui/SectionHeading";
+import { AnimatedSection } from "../components/ui/AnimatedSection";
 import { staticPortfolio } from "../data/portfolio";
 import type { Translation } from "../i18n/translations";
 
@@ -26,21 +27,25 @@ export default function ContactSection({ t }: { t: Translation }) {
   return (
     <section id="contact" className="px-4 py-20 md:px-6">
       <div className="mx-auto max-w-4xl text-center">
-        <SectionHeading title={t.contact.title} highlight={t.contact.highlight} subtitle={t.contact.subtitle} />
-        <div className="mx-auto grid max-w-2xl gap-4 sm:grid-cols-2">
-          <a href={staticPortfolio.contacts.whatsapp} target="_blank" rel="noopener noreferrer" aria-label={t.contact.whatsapp} className={linkPrimary}>
-            <MessageCircle size={18} aria-hidden="true" />{t.contact.whatsapp}
-          </a>
-          <a href={staticPortfolio.contacts.email} target="_blank" rel="noopener noreferrer" aria-label={t.contact.email} className={linkPrimary}>
-            <Mail size={18} aria-hidden="true" />{t.contact.email}
-          </a>
-          <a href={staticPortfolio.contacts.github} target="_blank" rel="noopener noreferrer" aria-label={t.contact.github} className={linkSecondary}>
-            <GitHubIcon />{t.contact.github}
-          </a>
-          <a href={staticPortfolio.contacts.linkedin} target="_blank" rel="noopener noreferrer" aria-label={t.contact.linkedin} className={linkSecondary}>
-            <LinkedInIcon />{t.contact.linkedin}
-          </a>
-        </div>
+        <AnimatedSection>
+          <SectionHeading title={t.contact.title} highlight={t.contact.highlight} subtitle={t.contact.subtitle} />
+        </AnimatedSection>
+        <AnimatedSection delay={150}>
+          <div className="mx-auto grid max-w-2xl gap-4 sm:grid-cols-2">
+            <a href={staticPortfolio.contacts.whatsapp} target="_blank" rel="noopener noreferrer" className={linkPrimary}>
+              <MessageCircle size={18} aria-hidden="true" />{t.contact.whatsapp}
+            </a>
+            <a href={staticPortfolio.contacts.email} target="_blank" rel="noopener noreferrer" className={linkPrimary}>
+              <Mail size={18} aria-hidden="true" />{t.contact.email}
+            </a>
+            <a href={staticPortfolio.contacts.github} target="_blank" rel="noopener noreferrer" className={linkSecondary}>
+              <GitHubIcon />{t.contact.github}
+            </a>
+            <a href={staticPortfolio.contacts.linkedin} target="_blank" rel="noopener noreferrer" className={linkSecondary}>
+              <LinkedInIcon />{t.contact.linkedin}
+            </a>
+          </div>
+        </AnimatedSection>
       </div>
     </section>
   );
