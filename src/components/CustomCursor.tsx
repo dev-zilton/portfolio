@@ -9,50 +9,51 @@ export function CustomCursor() {
     const ring = ringRef.current;
     if (!dot || !ring) return;
 
-    let mouseX = 0, mouseY = 0;
-    let ringX = 0, ringY = 0;
+    let mouseX = window.innerWidth / 2;
+    let mouseY = window.innerHeight / 2;
+    let ringX = mouseX;
+    let ringY = mouseY;
     let animId: number;
+    let visible = false;
+
+    const show = () => {
+      if (!visible) {
+        visible = true;
+        dot.style.opacity = "1";
+        ring.style.opacity = "1";
+      }
+    };
 
     const onMove = (e: MouseEvent) => {
       mouseX = e.clientX;
       mouseY = e.clientY;
       dot.style.transform = `translate(${mouseX}px, ${mouseY}px)`;
+      show();
+    };
+
+    const onLeaveDoc = (e: MouseEvent) => {
+      if (!e.relatedTarget && !(e as any).toElement) {
+        visible = false;
+        dot.style.opacity = "0";
+        ring.style.opacity = "0";
+      }
     };
 
     const animate = () => {
-      ringX += (mouseX - ringX) * 0.12;
-      ringY += (mouseY - ringY) * 0.12;
+      ringX += (mouseX - ringX) * 0.15;
+      ringY += (mouseY - ringY) * 0.15;
       ring.style.transform = `translate(${ringX}px, ${ringY}px)`;
       animId = requestAnimationFrame(animate);
     };
 
-    const onEnter = () => {
-      dot.style.opacity = "1";
-      ring.style.opacity = "1";
-    };
-
-    const onLeave = () => {
-      dot.style.opacity = "0";
-      ring.style.opacity = "0";
-    };
-
-    const onDown = () => ring.style.transform += " scale(0.8)";
-    const onUp = () => {};
-
-    window.addEventListener("mousemove", onMove);
-    window.addEventListener("mouseenter", onEnter);
-    window.addEventListener("mouseleave", onLeave);
-    window.addEventListener("mousedown", onDown);
-    window.addEventListener("mouseup", onUp);
+    document.addEventListener("mousemove", onMove);
+    document.addEventListener("mouseout", onLeaveDoc);
     animate();
 
     return () => {
       cancelAnimationFrame(animId);
-      window.removeEventListener("mousemove", onMove);
-      window.removeEventListener("mouseenter", onEnter);
-      window.removeEventListener("mouseleave", onLeave);
-      window.removeEventListener("mousedown", onDown);
-      window.removeEventListener("mouseup", onUp);
+      document.removeEventListener("mousemove", onMove);
+      document.removeEventListener("mouseout", onLeaveDoc);
     };
   }, []);
 
@@ -64,6 +65,7 @@ export function CustomCursor() {
     zIndex: 99999,
     opacity: 0,
     willChange: "transform",
+    transition: "opacity 0.2s",
   };
 
   return (
@@ -92,7 +94,6 @@ export function CustomCursor() {
           border: "1.5px solid rgba(45, 212, 191, 0.6)",
           marginLeft: "-18px",
           marginTop: "-18px",
-          transition: "border-color 0.2s",
         }}
       />
     </>
