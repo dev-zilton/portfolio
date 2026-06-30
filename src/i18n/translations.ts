@@ -211,6 +211,18 @@ export const translations: Record<Locale, Translation> = {
           description: "View all repositories and contributions on GitHub.",
           tags: ["Python", "Java", "Web"],
         },
+        {
+          id: "landingpage",
+          title: "Landing Page",
+          description: "Modern responsive landing page built with a clean, conversion-focused layout.",
+          tags: ["React", "Tailwind CSS", "Responsive Design"],
+        },
+        {
+          id: "startuplanding",
+          title: "Startup Landing Page",
+          description: "Landing page designed for a startup, focused on clarity and call-to-action.",
+          tags: ["React", "Tailwind CSS", "Landing Page"],
+        },
       ],
     },
     education: {
@@ -365,6 +377,18 @@ export const translations: Record<Locale, Translation> = {
           description: "Ver todos os repositórios e contribuições no GitHub.",
           tags: ["Python", "Java", "Web"],
         },
+        {
+          id: "landingpage",
+          title: "Landing Page",
+          description: "Landing page moderna e responsiva, com layout limpo focado em conversao.",
+          tags: ["React", "Tailwind CSS", "Design Responsivo"],
+        },
+        {
+          id: "startuplanding",
+          title: "Startup Landing Page",
+          description: "Landing page desenvolvida para uma startup, focada em clareza e call-to-action.",
+          tags: ["React", "Tailwind CSS", "Landing Page"],
+        },
       ],
     },
     education: {
@@ -517,6 +541,18 @@ export const translations: Record<Locale, Translation> = {
           title: "Projets GitHub",
           description: "Voir tous les dépôts et contributions sur GitHub.",
           tags: ["Python", "Java", "Web"],
+        },
+        {
+          id: "landingpage",
+          title: "Landing Page",
+          description: "Landing page moderne et responsive, avec une mise en page epuree axee sur la conversion.",
+          tags: ["React", "Tailwind CSS", "Design Responsive"],
+        },
+        {
+          id: "startuplanding",
+          title: "Landing Page Startup",
+          description: "Landing page concue pour une startup, axee sur la clarte et l'appel a l'action.",
+          tags: ["React", "Tailwind CSS", "Landing Page"],
         },
       ],
     },

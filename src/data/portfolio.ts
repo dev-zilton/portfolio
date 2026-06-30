@@ -22,6 +22,8 @@ export const staticPortfolio = {
       link: "https://github.com/dev-zilton/SistemaVendasUnico.java",
     },
     { id: "github", icon: "code", link: "https://github.com/dev-zilton" },
+    { id: "landingpage", icon: "layout", link: "https://website-ten-iota-18.vercel.app/" },
+    { id: "startuplanding", icon: "rocket", link: "https://startup-website-build.vercel.app/" },
   ],
 
   contacts: {
