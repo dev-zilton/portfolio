@@ -186,10 +186,10 @@ export const translations: Record<Locale, Translation> = {
       items: [
         {
           id: "irrigation",
-          title: "Agriculture Irrigation System",
+          title: "Marketing Digital Landing Page",
           description:
-            "IoT-based irrigation system using soil moisture sensors and Arduino.",
-          tags: ["IoT", "Arduino", "Automation"],
+            "Professional and responsive landing page for online course lead capture, with testimonials, benefits, FAQ and ActiveCampaign integration.",
+          tags: ["HTML/CSS", "JavaScript", "React", "Responsive"],
         },
         {
           id: "rentcar",
@@ -352,10 +352,10 @@ export const translations: Record<Locale, Translation> = {
       items: [
         {
           id: "irrigation",
-          title: "Sistema de Irrigação Agrícola",
+          title: "Marketing Digital Landing Page",
           description:
-            "Sistema de irrigação baseado em IoT com sensores de humidade do solo e Arduino.",
-          tags: ["IoT", "Arduino", "Automação"],
+            "Landing page profissional e responsiva para captura de leads de curso online, com depoimentos, beneficios, FAQ e integracao com ActiveCampaign.",
+          tags: ["HTML/CSS", "JavaScript", "React", "Responsivo"],
         },
         {
           id: "rentcar",
@@ -517,10 +517,10 @@ export const translations: Record<Locale, Translation> = {
       items: [
         {
           id: "irrigation",
-          title: "Système d'irrigation agricole",
+          title: "Marketing Digital Landing Page",
           description:
-            "Système d'irrigation IoT avec capteurs d'humidité du sol et Arduino.",
-          tags: ["IoT", "Arduino", "Automatisation"],
+            "Landing page professionnelle et responsive pour la capture de leads de cours en ligne, avec temoignages, avantages, FAQ et integration ActiveCampaign.",
+          tags: ["HTML/CSS", "JavaScript", "React", "Responsive"],
         },
         {
           id: "rentcar",
