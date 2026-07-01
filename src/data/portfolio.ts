@@ -14,7 +14,7 @@ export const staticPortfolio = {
   ],
 
   projects: [
-    { id: "irrigation", icon: "leaf", link: "https://github.com/dev-zilton" },
+    { id: "irrigation", icon: "leaf", link: "https://marketing-digital-landingg.vercel.app/" },
     { id: "rentcar", icon: "car", link: "https://github.com/dev-zilton" },
     {
       id: "picasso",
