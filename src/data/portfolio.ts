@@ -14,16 +14,28 @@ export const staticPortfolio = {
   ],
 
   projects: [
-    { id: "irrigation", icon: "leaf", link: "https://marketing-digital-landingg.vercel.app/" },
-    { id: "rentcar", icon: "car", link: "https://github.com/dev-zilton" },
+    {
+      id: "irrigation",
+      icon: "leaf",
+      link: "https://marketing-digital-landingg.vercel.app/",
+    },
+    { id: "rentcar", icon: "car", link: "https://rentacar-mz.vercel.app/" },
     {
       id: "picasso",
       icon: "cart",
       link: "https://github.com/dev-zilton/SistemaVendasUnico.java",
     },
     { id: "github", icon: "code", link: "https://github.com/dev-zilton" },
-    { id: "landingpage", icon: "layout", link: "https://website-ten-iota-18.vercel.app/" },
-    { id: "startuplanding", icon: "rocket", link: "https://startup-website-build.vercel.app/" },
+    {
+      id: "landingpage",
+      icon: "layout",
+      link: "https://website-ten-iota-18.vercel.app/",
+    },
+    {
+      id: "startuplanding",
+      icon: "rocket",
+      link: "https://startup-website-build.vercel.app/",
+    },
   ],
 
   contacts: {
