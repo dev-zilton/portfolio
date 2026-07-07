@@ -196,7 +196,7 @@ export const translations: Record<Locale, Translation> = {
           title: "Rent Car System",
           description:
             "Full vehicle rental management system with modern interface.",
-          tags: ["Web Development", "React", "Management System"],
+          tags: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
         },
         {
           id: "picasso",
@@ -362,7 +362,7 @@ export const translations: Record<Locale, Translation> = {
           title: "Sistema de Rent a Car",
           description:
             "Sistema completo de gestão de aluguer de veículos com interface moderna.",
-          tags: ["Desenvolvimento Web", "React", "Gestão"],
+          tags: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
         },
         {
           id: "picasso",
@@ -527,7 +527,7 @@ export const translations: Record<Locale, Translation> = {
           title: "Système de location de voitures",
           description:
             "Système complet de gestion de location de véhicules avec interface moderne.",
-          tags: ["Développement Web", "React", "Gestion"],
+          tags: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
         },
         {
           id: "picasso",
