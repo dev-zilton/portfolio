@@ -1,4 +1,4 @@
-import { Leaf, Car, ShoppingCart, Code2, LayoutDashboard, Rocket } from "lucide-react";
+import { Leaf, Car, ShoppingCart, Code2, LayoutDashboard, Rocket, Shirt } from "lucide-react";
 import { useLanguage } from "../i18n/LanguageContext";
 import { GlassCard } from "./ui/GlassCard";
 
@@ -9,6 +9,7 @@ const iconMap: Record<string, React.ReactNode> = {
   code: <Code2 className="h-7 w-7" />,
   layout: <LayoutDashboard className="h-7 w-7" />,
   rocket: <Rocket className="h-7 w-7" />,
+  shirt: <Shirt className="h-7 w-7" />,
 };
 
 type ProjectCardProps = {

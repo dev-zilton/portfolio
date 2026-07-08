@@ -206,10 +206,10 @@ export const translations: Record<Locale, Translation> = {
           tags: ["Java Swing", "Desktop Application"],
         },
         {
-          id: "github",
-          title: "GitHub Projects",
-          description: "View all repositories and contributions on GitHub.",
-          tags: ["Python", "Java", "Web"],
+          id: "dripgod",
+          title: "DripGOd E-commerce",
+          description: "Premium Mozambican fashion store, with shopping cart, wishlist and WhatsApp checkout.",
+          tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
         },
         {
           id: "landingpage",
@@ -372,10 +372,10 @@ export const translations: Record<Locale, Translation> = {
           tags: ["Java Swing", "Aplicação Desktop"],
         },
         {
-          id: "github",
-          title: "Projetos GitHub",
-          description: "Ver todos os repositórios e contribuições no GitHub.",
-          tags: ["Python", "Java", "Web"],
+          id: "dripgod",
+          title: "E-commerce DripGOd",
+          description: "Loja de moda premium moçambicana, com carrinho de compras, favoritos e checkout via WhatsApp.",
+          tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
         },
         {
           id: "landingpage",
@@ -537,10 +537,10 @@ export const translations: Record<Locale, Translation> = {
           tags: ["Java Swing", "Application Desktop"],
         },
         {
-          id: "github",
-          title: "Projets GitHub",
-          description: "Voir tous les dépôts et contributions sur GitHub.",
-          tags: ["Python", "Java", "Web"],
+          id: "dripgod",
+          title: "E-commerce DripGOd",
+          description: "Boutique de mode premium mozambicaine, avec panier, favoris et paiement via WhatsApp.",
+          tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
         },
         {
           id: "landingpage",

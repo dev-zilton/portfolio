@@ -25,7 +25,7 @@ export const staticPortfolio = {
       icon: "cart",
       link: "https://github.com/dev-zilton/SistemaVendasUnico.java",
     },
-    { id: "github", icon: "code", link: "https://github.com/dev-zilton" },
+    { id: "dripgod", icon: "shirt", link: "https://fashion-website-improvements.vercel.app/" },
     {
       id: "landingpage",
       icon: "layout",
