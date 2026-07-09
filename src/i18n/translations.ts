@@ -218,9 +218,9 @@ export const translations: Record<Locale, Translation> = {
         },
         {
           id: "picasso",
-          title: "Picasso Events",
+          title: "Buy Easy Shop",
           description:
-            "Desktop application for sales and product management using Java Swing.",
+            "Complete point-of-sale (POS) system built with Java Swing, featuring MVC architecture, JSON persistence, and secure authentication. Includes an admin dashboard, product management, and sales processing with receipt generation.",
           tags: ["Java Swing", "Desktop Application"],
         },
       ],
@@ -384,9 +384,9 @@ export const translations: Record<Locale, Translation> = {
         },
         {
           id: "picasso",
-          title: "Picasso Eventos",
+          title: "Buy Easy Shop",
           description:
-            "Aplicação desktop para gestão de vendas e produtos com Java Swing.",
+            "Sistema completo de ponto de venda (POS) em Java Swing, com arquitetura MVC, persistência em JSON e autenticação segura. Inclui dashboard administrativo, gestão de produtos e processamento de vendas com emissão de recibos.",
           tags: ["Java Swing", "Aplicação Desktop"],
         },
       ],
@@ -549,9 +549,9 @@ export const translations: Record<Locale, Translation> = {
         },
         {
           id: "picasso",
-          title: "Picasso Events",
+          title: "Buy Easy Shop",
           description:
-            "Application desktop de gestion des ventes et produits avec Java Swing.",
+            "Système de point de vente (POS) complet développé en Java Swing, avec architecture MVC, persistance JSON et authentification sécurisée. Comprend un tableau de bord administrateur, la gestion des produits et le traitement des ventes avec génération de reçus.",
           tags: ["Java Swing", "Application Desktop"],
         },
       ],
