@@ -10,6 +10,7 @@ type Project = {
   title: string;
   description: string;
   tags: string[];
+  image?: string;
 };
 
 export default function ProjectsSection({ t, projects }: { t: Translation; projects: Project[] }) {
@@ -22,7 +23,7 @@ export default function ProjectsSection({ t, projects }: { t: Translation; proje
         <div className="grid gap-6 md:grid-cols-2">
           {projects.map((project, i) => (
             <AnimatedSection key={project.id} delay={i * 100}>
-              <ProjectCard icon={project.icon} link={project.link} title={project.title} description={project.description} tags={project.tags} />
+              <ProjectCard icon={project.icon} imageUrl={project.image} link={project.link} title={project.title} description={project.description} tags={project.tags} />
             </AnimatedSection>
           ))}
         </div>

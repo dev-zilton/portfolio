@@ -36,25 +36,28 @@ export function ProjectCard({
     <GlassCard className="group overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:shadow-2xl hover:shadow-turquoise-400/10">
       <div className="space-y-3">
         {imageUrl && (
-          <div className="-mx-5 -mt-5 mb-1 overflow-hidden rounded-t-2xl">
+          <div className="-mx-5 -mt-5 mb-3 overflow-hidden rounded-t-2xl border-b border-white/10 bg-[#1e1e1e]">
+            <div className="flex items-center gap-1.5 px-3 py-2.5">
+              <span className="h-2.5 w-2.5 rounded-full bg-red-500/70" />
+              <span className="h-2.5 w-2.5 rounded-full bg-yellow-500/70" />
+              <span className="h-2.5 w-2.5 rounded-full bg-green-500/70" />
+            </div>
             <img
               src={imageUrl}
               alt={title}
-              className="h-44 w-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+              className="h-40 w-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
             />
           </div>
         )}
 
-        {!imageUrl && (
-          <div className="flex items-start justify-between gap-3">
-            <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-turquoise-400 to-accent-purple text-white shadow-lg transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
-              {resolvedIcon}
-            </div>
-            <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs font-bold uppercase tracking-wider text-turquoise-300">
-              {t.projects.label}
-            </span>
+        <div className="flex items-start justify-between gap-3">
+          <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-turquoise-400 to-accent-purple text-white shadow-lg transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
+            {resolvedIcon}
           </div>
-        )}
+          <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs font-bold uppercase tracking-wider text-turquoise-300">
+            {t.projects.label}
+          </span>
+        </div>
 
         <h3 className="text-lg font-bold text-white transition-colors group-hover:text-turquoise-300">
           {title}

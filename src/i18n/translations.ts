@@ -182,7 +182,7 @@ export const translations: Record<Locale, Translation> = {
       subtitle:
         "Projects built with a focus on practical solutions and modern technologies.",
       label: "Project",
-      moreProjects: "More Projects",
+      moreProjects: "View Project",
       items: [
         {
           id: "irrigation",
@@ -199,17 +199,10 @@ export const translations: Record<Locale, Translation> = {
           tags: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
         },
         {
-          id: "picasso",
-          title: "Picasso Events",
-          description:
-            "Desktop application for sales and product management using Java Swing.",
-          tags: ["Java Swing", "Desktop Application"],
-        },
-        {
           id: "dripgod",
           title: "DripGOd E-commerce",
           description: "Premium Mozambican fashion store, with shopping cart, wishlist and WhatsApp checkout.",
-          tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+          tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Resend"],
         },
         {
           id: "landingpage",
@@ -222,6 +215,13 @@ export const translations: Record<Locale, Translation> = {
           title: "Soluções Digitais MZ",
           description: "Full corporate website for a digital agency in Mozambique, with dedicated sections for services, pricing, testimonials, FAQ and contact — built to convert visitors into clients.",
           tags: ["Next.js", "React", "Tailwind CSS"],
+        },
+        {
+          id: "picasso",
+          title: "Picasso Events",
+          description:
+            "Desktop application for sales and product management using Java Swing.",
+          tags: ["Java Swing", "Desktop Application"],
         },
       ],
     },
@@ -348,7 +348,7 @@ export const translations: Record<Locale, Translation> = {
       subtitle:
         "Projetos desenvolvidos com foco em soluções práticas e tecnologias modernas.",
       label: "Projeto",
-      moreProjects: "Mais Projetos",
+      moreProjects: "Ver Projeto",
       items: [
         {
           id: "irrigation",
@@ -365,22 +365,15 @@ export const translations: Record<Locale, Translation> = {
           tags: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
         },
         {
-          id: "picasso",
-          title: "Picasso Eventos",
-          description:
-            "Aplicação desktop para gestão de vendas e produtos com Java Swing.",
-          tags: ["Java Swing", "Aplicação Desktop"],
-        },
-        {
           id: "dripgod",
           title: "E-commerce DripGOd",
           description: "Loja de moda premium moçambicana, com carrinho de compras, favoritos e checkout via WhatsApp.",
-          tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+          tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Resend"],
         },
         {
           id: "landingpage",
           title: "SweetLar Moçambique",
-          description: "Móveis sob medida de alto padrão. Escolha a cor, o tamanho ideal e personalize o seu conforto.",
+          description: "Loja de móveis sob medida, com personalização de cor e tamanho para um conforto premium.",
           tags: ["React", "Tailwind CSS", "E-commerce"],
         },
         {
@@ -388,6 +381,13 @@ export const translations: Record<Locale, Translation> = {
           title: "Soluções Digitais MZ",
           description: "Website institucional completo para uma agencia digital mocambicana, com seccoes de servicos, precos, depoimentos, FAQ e contacto — pensado para converter visitantes em clientes.",
           tags: ["Next.js", "React", "Tailwind CSS"],
+        },
+        {
+          id: "picasso",
+          title: "Picasso Eventos",
+          description:
+            "Aplicação desktop para gestão de vendas e produtos com Java Swing.",
+          tags: ["Java Swing", "Aplicação Desktop"],
         },
       ],
     },
@@ -513,7 +513,7 @@ export const translations: Record<Locale, Translation> = {
       subtitle:
         "Projets conçus pour des solutions pratiques et des technologies modernes.",
       label: "Projet",
-      moreProjects: "Plus de projets",
+      moreProjects: "Voir le Projet",
       items: [
         {
           id: "irrigation",
@@ -530,17 +530,10 @@ export const translations: Record<Locale, Translation> = {
           tags: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
         },
         {
-          id: "picasso",
-          title: "Picasso Events",
-          description:
-            "Application desktop de gestion des ventes et produits avec Java Swing.",
-          tags: ["Java Swing", "Application Desktop"],
-        },
-        {
           id: "dripgod",
           title: "E-commerce DripGOd",
           description: "Boutique de mode premium mozambicaine, avec panier, favoris et paiement via WhatsApp.",
-          tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion"],
+          tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Resend"],
         },
         {
           id: "landingpage",
@@ -553,6 +546,13 @@ export const translations: Record<Locale, Translation> = {
           title: "Soluções Digitais MZ",
           description: "Site institutionnel complet pour une agence digitale mozambicaine, avec des sections dediees aux services, tarifs, temoignages, FAQ et contact — concu pour convertir les visiteurs en clients.",
           tags: ["Next.js", "React", "Tailwind CSS"],
+        },
+        {
+          id: "picasso",
+          title: "Picasso Events",
+          description:
+            "Application desktop de gestion des ventes et produits avec Java Swing.",
+          tags: ["Java Swing", "Application Desktop"],
         },
       ],
     },
