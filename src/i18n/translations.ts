@@ -199,6 +199,13 @@ export const translations: Record<Locale, Translation> = {
           tags: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
         },
         {
+          id: "matoladigital",
+          title: "Matola Digital",
+          description:
+            "Municipal transparency portal with a citizen service guide, request tracking by unique code, and an authenticated admin dashboard.",
+          tags: ["Node.js", "Turso", "Drizzle ORM", "Vercel Blob"],
+        },
+        {
           id: "dripgod",
           title: "DripGOd E-commerce",
           description: "Premium Mozambican fashion store, with shopping cart, wishlist and WhatsApp checkout.",
@@ -365,6 +372,13 @@ export const translations: Record<Locale, Translation> = {
           tags: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
         },
         {
+          id: "matoladigital",
+          title: "Matola Digital",
+          description:
+            "Portal de transparência municipal com guia de serviços ao cidadão, rastreio de processos por código único, e painel administrativo autenticado.",
+          tags: ["Node.js", "Turso", "Drizzle ORM", "Vercel Blob"],
+        },
+        {
           id: "dripgod",
           title: "E-commerce DripGOd",
           description: "Loja de moda premium moçambicana, com carrinho de compras, favoritos e checkout via WhatsApp.",
@@ -528,6 +542,13 @@ export const translations: Record<Locale, Translation> = {
           description:
             "Système complet de gestion de location de véhicules avec interface moderne.",
           tags: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
+        },
+        {
+          id: "matoladigital",
+          title: "Matola Digital",
+          description:
+            "Portail de transparence municipale avec guide des services aux citoyens, suivi des demandes par code unique, et tableau de bord admin authentifie.",
+          tags: ["Node.js", "Turso", "Drizzle ORM", "Vercel Blob"],
         },
         {
           id: "dripgod",

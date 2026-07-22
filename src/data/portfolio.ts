@@ -21,6 +21,7 @@ export const staticPortfolio = {
       image: "/irrigation.png",
     },
     { id: "rentcar", icon: "car", link: "https://rentacar-mz.vercel.app/", image: "/rentacar-mz.png" },
+    { id: "matoladigital", icon: "landmark", link: "https://matola-digital.vercel.app/", image: "/matola-digital.png" },
     {
       id: "picasso",
       icon: "cart",
