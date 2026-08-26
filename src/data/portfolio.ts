@@ -2,15 +2,49 @@ export const staticPortfolio = {
   name: "Zilton Tuaire Abdul",
   firstName: "Zilton",
 
-  skills: [
-    { name: "Python", level: 90, icon: "python" },
-    { name: "Java (Swing)", level: 85, icon: "java" },
-    { name: "React", level: 70, icon: "react" },
-    { name: "Tailwind CSS", level: 75, icon: "tailwind" },
-    { name: "FastAPI", level: 65, icon: "fastapi" },
-    { name: "PostgreSQL", level: 70, icon: "postgresql" },
-    { name: "Arduino / IoT", level: 80, icon: "arduino" },
-    { name: "Git & GitHub", level: 85, icon: "git" },
+  skillCategories: [
+    {
+      id: "frontend",
+      items: [
+        { name: "React", icon: "react" },
+        { name: "Next.js", icon: "nextjs" },
+        { name: "TypeScript", icon: "typescript" },
+        { name: "Tailwind CSS", icon: "tailwind" },
+      ],
+    },
+    {
+      id: "backend",
+      items: [
+        { name: "Python", icon: "python" },
+        { name: "Java (Swing)", icon: "java" },
+        { name: "Spring Boot", icon: "springboot" },
+        { name: "FastAPI", icon: "fastapi" },
+        { name: "Node.js", icon: "nodejs" },
+        { name: "Express", icon: "express" },
+        { name: "PostgreSQL", icon: "postgresql" },
+        { name: "MySQL / MariaDB", icon: "mysql" },
+        { name: "SQLite / Turso", icon: "sqlite" },
+        { name: "JWT", icon: "jwt" },
+      ],
+    },
+    {
+      id: "devops",
+      items: [
+        { name: "Git", icon: "git" },
+        { name: "GitHub", icon: "github" },
+        { name: "Docker", icon: "docker" },
+      ],
+    },
+    {
+      id: "cloud",
+      items: [
+        { name: "Vercel", icon: "vercel" },
+        { name: "AWS", icon: "aws" },
+        { name: "Supabase", icon: "supabase" },
+        { name: "M-Pesa / e-Mola", icon: "mpesa" },
+        { name: "Arduino / IoT", icon: "arduino" },
+      ],
+    },
   ],
 
   projects: [
@@ -54,4 +88,5 @@ export const staticPortfolio = {
   footerIds: ["about", "skills", "projects", "contact"] as const,
 };
 
-export type Skill = (typeof staticPortfolio.skills)[number];
+export type SkillCategory = (typeof staticPortfolio.skillCategories)[number];
+export type Skill = SkillCategory["items"][number];

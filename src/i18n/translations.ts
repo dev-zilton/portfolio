@@ -56,6 +56,12 @@ export type Translation = {
     highlight: string;
     technical: string;
     tools: string;
+    categories: {
+      frontend: string;
+      backend: string;
+      devops: string;
+      cloud: string;
+    };
   };
   projects: {
     title: string;
@@ -175,6 +181,12 @@ export const translations: Record<Locale, Translation> = {
       highlight: "Skills",
       technical: "Technical Skills",
       tools: "Tools & Technologies",
+      categories: {
+        frontend: "Frontend",
+        backend: "Backend",
+        devops: "DevOps & Tools",
+        cloud: "Cloud & IoT",
+      },
     },
     projects: {
       title: "My",
@@ -348,6 +360,12 @@ export const translations: Record<Locale, Translation> = {
       highlight: "Competências",
       technical: "Competências Técnicas",
       tools: "Ferramentas e Tecnologias",
+      categories: {
+        frontend: "Frontend",
+        backend: "Backend",
+        devops: "DevOps & Ferramentas",
+        cloud: "Cloud & IoT",
+      },
     },
     projects: {
       title: "Os meus",
@@ -520,6 +538,12 @@ export const translations: Record<Locale, Translation> = {
       highlight: "Compétences",
       technical: "Compétences techniques",
       tools: "Outils et technologies",
+      categories: {
+        frontend: "Frontend",
+        backend: "Backend",
+        devops: "DevOps & Outils",
+        cloud: "Cloud & IoT",
+      },
     },
     projects: {
       title: "Mes",
