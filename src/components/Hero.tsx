@@ -1,6 +1,6 @@
 import profileImage from "../assets/profile.webp";
 import { ParticleBackground } from "./ParticleBackground";
-import { staticPortfolio } from "../data/portfolio";
+import { staticPortfolio, totalSkillsCount, totalProjectsCount } from "../data/portfolio";
 import { useLanguage } from "../i18n/LanguageContext";
 import { PrimaryButton } from "./ui/PrimaryButton";
 
@@ -70,20 +70,31 @@ export function Hero({ onContact }: HeroProps) {
             </div>
 
             {/* METRICS */}
+            {/* Os dois primeiros valores (skills e projetos) são calculados a
+                partir dos dados reais em portfolio.ts, para nunca ficarem
+                desatualizados; só o texto (label) vem da tradução. */}
             <div className="mt-12 grid grid-cols-3 gap-4 border-t border-glass/10 pt-8">
-              {t.hero.metrics.map((metric) => (
+              {t.hero.metrics.map((metric, index) => {
+                const value =
+                  index === 0
+                    ? `${totalSkillsCount}+`
+                    : index === 1
+                      ? `${totalProjectsCount}+`
+                      : metric.value;
+                return (
                 <div
                   key={metric.label}
                   className="text-center transition-transform hover:scale-[1.03] md:text-left"
                 >
                   <p className="text-2xl font-bold text-gradient-primary md:text-3xl">
-                    {metric.value}
+                    {value}
                   </p>
                   <p className="text-xs text-copy-muted md:text-sm">
                     {metric.label}
                   </p>
                 </div>
-              ))}
+                );
+              })}
             </div>
           </div>
 
