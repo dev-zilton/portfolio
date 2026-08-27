@@ -6,11 +6,14 @@ export const staticPortfolio = {
     {
       id: "frontend",
       items: [
+        { name: "HTML / CSS", icon: "html" },
+        { name: "JavaScript", icon: "javascript" },
         { name: "React", icon: "react" },
         { name: "React Native", icon: "reactnative" },
         { name: "Next.js", icon: "nextjs" },
         { name: "TypeScript", icon: "typescript" },
         { name: "Tailwind CSS", icon: "tailwind" },
+        { name: "Framer Motion", icon: "framer" },
       ],
     },
     {
@@ -27,6 +30,7 @@ export const staticPortfolio = {
         { name: "SQLite / Turso", icon: "sqlite" },
         { name: "Drizzle ORM", icon: "drizzle" },
         { name: "JWT", icon: "jwt" },
+        { name: "Resend", icon: "resend" },
       ],
     },
     {
