@@ -28,12 +28,12 @@ export default function AboutSection({ t }: { t: Translation }) {
           <AnimatedSection delay={200}>
             <div className="space-y-4">
               <div>
-                <h4 className="mb-4 text-sm font-semibold text-white">{t.aboutSection.educationLabel}</h4>
+                <h4 className="mb-4 text-sm font-semibold text-copy">{t.aboutSection.educationLabel}</h4>
                 <div className="space-y-3">
                   {t.education.items.map((edu) => (
                     <GlassCard key={edu.degree} interactive={false}>
                       <div className="flex flex-col gap-1">
-                        <span className="text-sm font-semibold text-white">{edu.degree}</span>
+                        <span className="text-sm font-semibold text-copy">{edu.degree}</span>
                         <span className="text-xs text-turquoise-300">{edu.school} • {edu.year}</span>
                         {edu.description ? <span className="text-sm text-copy-muted">{edu.description}</span> : null}
                       </div>
@@ -42,7 +42,7 @@ export default function AboutSection({ t }: { t: Translation }) {
                 </div>
               </div>
               <div>
-                <h4 className="mb-3 text-sm font-semibold text-white">{t.aboutSection.certificatesLabel}</h4>
+                <h4 className="mb-3 text-sm font-semibold text-copy">{t.aboutSection.certificatesLabel}</h4>
                 <ul className="space-y-2 text-sm text-copy-muted">
                   {t.certificates.items.map((c) => (
                     <li key={c} className="flex items-start gap-2">

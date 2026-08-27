@@ -2,13 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --color-surface: 11 17 23;
+  --color-surface-elevated: 15 23 42;
+  --color-copy: 243 244 246;
+  --color-copy-muted: 156 163 175;
+  --color-glass: 255 255 255;
+}
+
+.light {
+  --color-surface: 248 250 252;
+  --color-surface-elevated: 255 255 255;
+  --color-copy: 17 24 39;
+  --color-copy-muted: 71 85 105;
+  --color-glass: 15 23 42;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
   }
 
   body {
-    @apply bg-surface text-copy antialiased;
+    @apply bg-surface text-copy antialiased transition-colors duration-300;
   }
 }
 
@@ -17,16 +33,8 @@
     @apply bg-gradient-to-r from-turquoise-400 to-accent-purple bg-clip-text text-transparent;
   }
 
-  .text-copy {
-    @apply text-[#F3F4F6];
-  }
-
-  .text-copy-muted {
-    @apply text-[#F3F4F6]/80;
-  }
-
   .glass-card {
-    @apply rounded-2xl border border-white/10 bg-white/[0.04] p-8 backdrop-blur-xl;
+    @apply rounded-2xl border border-glass/10 bg-glass/[0.04] p-8 backdrop-blur-xl;
   }
 
   .btn-primary {
@@ -56,7 +64,7 @@
   }
 
   .section-heading {
-    @apply text-center text-3xl font-bold tracking-tight text-white md:text-5xl;
+    @apply text-center text-3xl font-bold tracking-tight text-copy md:text-5xl;
   }
 
   .section-subheading {

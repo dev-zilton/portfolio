@@ -16,7 +16,7 @@ export function InfoCard({ icon, title, content }: InfoCardProps) {
         </div>
 
         {/* TITLE */}
-        <h3 className="text-lg font-bold text-white">{title}</h3>
+        <h3 className="text-lg font-bold text-copy">{title}</h3>
 
         {/* CONTENT */}
         {Array.isArray(content) ? (

@@ -9,20 +9,19 @@ export default {
       },
       colors: {
         surface: {
-          DEFAULT: "#0B1117",
-          light: "#F8FAFC",
+          DEFAULT: "rgb(var(--color-surface) / <alpha-value>)",
         },
         "surface-elevated": {
-          DEFAULT: "#0F172A",
-          light: "#FFFFFF",
+          DEFAULT: "rgb(var(--color-surface-elevated) / <alpha-value>)",
         },
         copy: {
-          DEFAULT: "#F3F4F6",
-          light: "#111827",
+          DEFAULT: "rgb(var(--color-copy) / <alpha-value>)",
         },
         "copy-muted": {
-          DEFAULT: "#9CA3AF",
-          light: "#6B7280",
+          DEFAULT: "rgb(var(--color-copy-muted) / <alpha-value>)",
+        },
+        glass: {
+          DEFAULT: "rgb(var(--color-glass) / <alpha-value>)",
         },
         turquoise: {
           300: "#5eead4",

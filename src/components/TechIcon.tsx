@@ -1,4 +1,4 @@
-import { Coffee, Cloud, Smartphone } from "lucide-react";
+import { Coffee, Cloud, Smartphone, Image as ImageIcon } from "lucide-react";
 import {
   SiReact,
   SiNextdotjs,
@@ -19,32 +19,37 @@ import {
   SiVercel,
   SiSupabase,
   SiArduino,
+  SiFigma,
+  SiCanva,
 } from "react-icons/si";
 import type { Skill } from "../data/portfolio";
 
 const iconMap: Record<string, React.ReactNode> = {
   react: <SiReact color="#61DAFB" />,
-  nextjs: <SiNextdotjs color="#ffffff" />,
+  nextjs: <SiNextdotjs />,
   typescript: <SiTypescript color="#3178C6" />,
   tailwind: <SiTailwindcss color="#38BDF8" />,
   python: <SiPython color="#3776AB" />,
   java: <Coffee color="#ED8B00" />,
   springboot: <SiSpringboot color="#6DB33F" />,
   fastapi: <SiFastapi color="#009688" />,
-  express: <SiExpress color="#ffffff" />,
+  express: <SiExpress />,
   postgresql: <SiPostgresql color="#4169E1" />,
   mysql: <SiMysql color="#4479A1" />,
   sqlite: <SiSqlite color="#003B57" />,
   jwt: <SiJsonwebtokens color="#D63AFF" />,
   nodejs: <SiNodedotjs color="#5FA04E" />,
   git: <SiGit color="#F05032" />,
-  github: <SiGithub color="#ffffff" />,
+  github: <SiGithub />,
   docker: <SiDocker color="#2496ED" />,
-  vercel: <SiVercel color="#ffffff" />,
+  vercel: <SiVercel />,
   aws: <Cloud color="#FF9900" />,
   supabase: <SiSupabase color="#3ECF8E" />,
   mpesa: <Smartphone color="#E4002B" />,
   arduino: <SiArduino color="#00979D" />,
+  figma: <SiFigma color="#F24E1E" />,
+  canva: <SiCanva color="#00C4CC" />,
+  photoshop: <ImageIcon color="#31A8FF" />,
 };
 
 type TechIconProps = {
@@ -60,7 +65,7 @@ export function TechIcon({ skill }: TechIconProps) {
       title={skill.name}
     >
       <div
-        className="flex h-14 w-14 items-center justify-center rounded-xl border border-white/10 bg-white/5 text-2xl transition-all duration-300 group-hover:-translate-y-1 group-hover:border-turquoise-400/30 group-hover:bg-white/10"
+        className="flex h-14 w-14 items-center justify-center rounded-xl border border-glass/10 bg-glass/5 text-2xl transition-all duration-300 group-hover:-translate-y-1 group-hover:border-turquoise-400/30 group-hover:bg-glass/10"
         aria-label={skill.name}
         role="img"
       >

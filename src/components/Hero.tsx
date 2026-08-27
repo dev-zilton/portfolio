@@ -70,7 +70,7 @@ export function Hero({ onContact }: HeroProps) {
             </div>
 
             {/* METRICS */}
-            <div className="mt-12 grid grid-cols-3 gap-4 border-t border-white/10 pt-8">
+            <div className="mt-12 grid grid-cols-3 gap-4 border-t border-glass/10 pt-8">
               {t.hero.metrics.map((metric) => (
                 <div
                   key={metric.label}

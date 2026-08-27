@@ -61,6 +61,7 @@ export type Translation = {
       backend: string;
       devops: string;
       cloud: string;
+      design: string;
     };
   };
   projects: {
@@ -186,6 +187,7 @@ export const translations: Record<Locale, Translation> = {
         backend: "Backend",
         devops: "DevOps & Tools",
         cloud: "Cloud & IoT",
+        design: "Design",
       },
     },
     projects: {
@@ -365,6 +367,7 @@ export const translations: Record<Locale, Translation> = {
         backend: "Backend",
         devops: "DevOps & Ferramentas",
         cloud: "Cloud & IoT",
+        design: "Design",
       },
     },
     projects: {
@@ -543,6 +546,7 @@ export const translations: Record<Locale, Translation> = {
         backend: "Backend",
         devops: "DevOps & Outils",
         cloud: "Cloud & IoT",
+        design: "Design",
       },
     },
     projects: {

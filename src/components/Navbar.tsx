@@ -42,13 +42,13 @@ export function Navbar({
   }, []);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-surface/90 backdrop-blur-xl transition-colors duration-300">
+    <header className="fixed inset-x-0 top-0 z-50 border-b border-glass/10 bg-surface/90 backdrop-blur-xl transition-colors duration-300">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6">
         {/* LOGO */}
         <button
           type="button"
           onClick={() => handleNav("home")}
-          className="text-lg font-bold tracking-wide text-white transition-opacity hover:opacity-80"
+          className="text-lg font-bold tracking-wide text-copy transition-opacity hover:opacity-80"
           aria-label="Go to home"
         >
           PORTFOLIO<span className="text-turquoise-400">.</span>
@@ -56,7 +56,7 @@ export function Navbar({
 
         {/* DESKTOP NAV */}
         <nav
-          className="hidden items-center gap-4 rounded-full border border-white/10 bg-white/5 px-4 py-2 lg:flex"
+          className="hidden items-center gap-4 rounded-full border border-glass/10 bg-glass/5 px-4 py-2 lg:flex"
           aria-label="Main navigation"
         >
           {staticPortfolio.navIds.map((id) => (
@@ -82,7 +82,7 @@ export function Navbar({
             aria-label={
               isDark ? "Mudar para modo claro" : "Mudar para modo escuro"
             }
-            className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/15 bg-white/5 text-copy transition-all duration-200 hover:bg-white/10 hover:border-turquoise-400/50"
+            className="flex h-9 w-9 items-center justify-center rounded-lg border border-glass/15 bg-glass/5 text-copy transition-all duration-200 hover:bg-glass/10 hover:border-turquoise-400/50"
           >
             {isDark ? (
               <Sun
@@ -109,7 +109,7 @@ export function Navbar({
           {/* MOBILE BUTTON */}
           <button
             type="button"
-            className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-lg border border-white/15 bg-white/5 lg:hidden"
+            className="flex h-10 w-10 flex-col items-center justify-center gap-1.5 rounded-lg border border-glass/15 bg-glass/5 lg:hidden"
             aria-expanded={isMenuOpen}
             aria-controls="mobile-menu"
             aria-label={isMenuOpen ? "Close menu" : "Open menu"}

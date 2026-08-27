@@ -10,6 +10,7 @@ const categoryDotColor: Record<string, string> = {
   backend: "bg-accent-purple",
   devops: "bg-turquoise-400",
   cloud: "bg-accent-purple",
+  design: "bg-turquoise-400",
 };
 
 export default function SkillsSection({ t }: { t: Translation }) {
@@ -23,7 +24,7 @@ export default function SkillsSection({ t }: { t: Translation }) {
           {staticPortfolio.skillCategories.map((category, index) => (
             <AnimatedSection key={category.id} delay={100 * (index + 1)}>
               <GlassCard interactive={false}>
-                <h3 className="mb-6 flex items-center gap-2 text-lg font-bold text-white">
+                <h3 className="mb-6 flex items-center gap-2 text-lg font-bold text-copy">
                   <span
                     className={`h-2 w-2 rounded-full ${categoryDotColor[category.id] ?? "bg-turquoise-400"}`}
                   />

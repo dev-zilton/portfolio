@@ -23,15 +23,15 @@ export function ContactActionButton({
         ${
           variant === "primary"
             ? "border-turquoise-400/30 bg-turquoise-400/10 hover:bg-turquoise-400/20"
-            : "border-white/10 bg-white/5 hover:bg-white/10"
+            : "border-glass/10 bg-glass/5 hover:bg-glass/10"
         }
       `}
     >
-      <span className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white">
+      <span className="flex h-10 w-10 items-center justify-center rounded-full bg-glass/10 text-copy">
         {icon}
       </span>
 
-      <span className="font-medium text-white">{label}</span>
+      <span className="font-medium text-copy">{label}</span>
     </a>
   );
 }

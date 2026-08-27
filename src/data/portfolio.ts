@@ -45,6 +45,14 @@ export const staticPortfolio = {
         { name: "Arduino / IoT", icon: "arduino" },
       ],
     },
+    {
+      id: "design",
+      items: [
+        { name: "Figma", icon: "figma" },
+        { name: "Canva", icon: "canva" },
+        { name: "Photoshop", icon: "photoshop" },
+      ],
+    },
   ],
 
   projects: [

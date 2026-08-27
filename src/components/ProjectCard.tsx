@@ -54,12 +54,12 @@ export function ProjectCard({
           <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-turquoise-400 to-accent-purple text-white shadow-lg transition-transform duration-300 group-hover:scale-110 group-hover:rotate-3">
             {resolvedIcon}
           </div>
-          <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-1 text-xs font-bold uppercase tracking-wider text-turquoise-300">
+          <span className="rounded-full border border-glass/10 bg-glass/5 px-2.5 py-1 text-xs font-bold uppercase tracking-wider text-turquoise-300">
             {t.projects.label}
           </span>
         </div>
 
-        <h3 className="text-lg font-bold text-white transition-colors group-hover:text-turquoise-300">
+        <h3 className="text-lg font-bold text-copy transition-colors group-hover:text-turquoise-300">
           {title}
         </h3>
 
@@ -71,7 +71,7 @@ export function ProjectCard({
           {tags.map((tag) => (
             <span
               key={tag}
-              className="rounded-lg bg-white/10 px-2 py-1 text-xs font-medium text-copy-muted transition-colors duration-300 group-hover:bg-turquoise-400/10"
+              className="rounded-lg bg-glass/10 px-2 py-1 text-xs font-medium text-copy-muted transition-colors duration-300 group-hover:bg-turquoise-400/10"
             >
               {tag}
             </span>
@@ -82,7 +82,7 @@ export function ProjectCard({
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="group/link mt-2 inline-flex w-full items-center justify-between rounded-xl bg-white/10 px-4 py-2.5 text-sm font-medium text-copy transition-all duration-300 hover:bg-turquoise-400/15 hover:text-turquoise-300 focus:outline-none focus:ring-2 focus:ring-turquoise-400/30"
+          className="group/link mt-2 inline-flex w-full items-center justify-between rounded-xl bg-glass/10 px-4 py-2.5 text-sm font-medium text-copy transition-all duration-300 hover:bg-turquoise-400/15 hover:text-turquoise-300 focus:outline-none focus:ring-2 focus:ring-turquoise-400/30"
           aria-label={`Abrir projeto: ${title}`}
         >
           {t.projects.moreProjects}

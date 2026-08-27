@@ -22,7 +22,7 @@ export function Footer({ scrollToSection }: FooterProps) {
   return (
     <footer
       role="contentinfo"
-      className="border-t border-white/10 bg-surface-elevated px-4 py-10"
+      className="border-t border-glass/10 bg-surface-elevated px-4 py-10"
     >
       <div className="mx-auto max-w-7xl space-y-6 text-center">
         {/* NAVIGATION */}
@@ -36,7 +36,7 @@ export function Footer({ scrollToSection }: FooterProps) {
               type="button"
               onClick={() => scrollToSection(id)}
               aria-label={`Ir para secção ${footerLabels[id]}`}
-              className="text-sm text-copy-muted transition-colors hover:text-white"
+              className="text-sm text-copy-muted transition-colors hover:text-copy"
             >
               {footerLabels[id]}
             </button>
@@ -48,7 +48,7 @@ export function Footer({ scrollToSection }: FooterProps) {
           <a
             href="/curriculo.pdf"
             download="Curriculo_Zilton_Dev.pdf"
-            className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-5 py-2 text-sm text-copy-muted transition-all hover:bg-white/10 hover:text-white focus:outline-none focus:ring-2 focus:ring-white/20"
+            className="inline-flex items-center gap-2 rounded-full border border-glass/15 bg-glass/5 px-5 py-2 text-sm text-copy-muted transition-all hover:bg-glass/10 hover:text-copy focus:outline-none focus:ring-2 focus:ring-glass/20"
             aria-label="Baixar currículo em PDF"
           >
             📄 Baixar Currículo
@@ -56,7 +56,7 @@ export function Footer({ scrollToSection }: FooterProps) {
         </div>
 
         {/* DIVIDER */}
-        <div className="h-px w-full bg-white/10" />
+        <div className="h-px w-full bg-glass/10" />
 
         {/* COPYRIGHT */}
         <p className="text-copy-muted">

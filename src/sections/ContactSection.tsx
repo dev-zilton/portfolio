@@ -23,7 +23,7 @@ function LinkedInIcon() {
 export default function ContactSection({ t }: { t: Translation }) {
   const linkBase = "flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-turquoise-400";
   const linkPrimary = `${linkBase} bg-turquoise-500 text-white hover:bg-turquoise-400 active:scale-95`;
-  const linkSecondary = `${linkBase} border border-white/10 bg-white/5 text-copy hover:bg-white/10 active:scale-95`;
+  const linkSecondary = `${linkBase} border border-glass/10 bg-glass/5 text-copy hover:bg-glass/10 active:scale-95`;
   return (
     <section id="contact" className="px-4 py-20 md:px-6">
       <div className="mx-auto max-w-4xl text-center">
