@@ -7,6 +7,7 @@ export const staticPortfolio = {
       id: "frontend",
       items: [
         { name: "React", icon: "react" },
+        { name: "React Native", icon: "reactnative" },
         { name: "Next.js", icon: "nextjs" },
         { name: "TypeScript", icon: "typescript" },
         { name: "Tailwind CSS", icon: "tailwind" },
@@ -24,6 +25,7 @@ export const staticPortfolio = {
         { name: "PostgreSQL", icon: "postgresql" },
         { name: "MySQL / MariaDB", icon: "mysql" },
         { name: "SQLite / Turso", icon: "sqlite" },
+        { name: "Drizzle ORM", icon: "drizzle" },
         { name: "JWT", icon: "jwt" },
       ],
     },
@@ -62,14 +64,29 @@ export const staticPortfolio = {
       link: "https://marketing-digital-landingg.vercel.app/",
       image: "/irrigation.png",
     },
-    { id: "rentcar", icon: "car", link: "https://rentacar-mz.vercel.app/", image: "/rentacar-mz.png" },
-    { id: "matoladigital", icon: "landmark", link: "https://matola-digital.vercel.app/", image: "/matola-digital.png" },
+    {
+      id: "rentcar",
+      icon: "car",
+      link: "https://rentacar-mz.vercel.app/",
+      image: "/rentacar-mz.png",
+    },
+    {
+      id: "matoladigital",
+      icon: "landmark",
+      link: "https://matola-digital.vercel.app/",
+      image: "/matola-digital.png",
+    },
     {
       id: "picasso",
       icon: "cart",
       link: "https://github.com/dev-zilton/SistemaVendasUnico.java",
     },
-    { id: "dripgod", icon: "shirt", link: "https://fashion-website-improvements.vercel.app/", image: "/dripgod.png" },
+    {
+      id: "dripgod",
+      icon: "shirt",
+      link: "https://fashion-website-improvements.vercel.app/",
+      image: "/dripgod.png",
+    },
     {
       id: "landingpage",
       icon: "layout",

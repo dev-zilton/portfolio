@@ -21,11 +21,13 @@ import {
   SiArduino,
   SiFigma,
   SiCanva,
+  SiDrizzle,
 } from "react-icons/si";
 import type { Skill } from "../data/portfolio";
 
 const iconMap: Record<string, React.ReactNode> = {
   react: <SiReact color="#61DAFB" />,
+  reactnative: <SiReact color="#61DAFB" />,
   nextjs: <SiNextdotjs />,
   typescript: <SiTypescript color="#3178C6" />,
   tailwind: <SiTailwindcss color="#38BDF8" />,
@@ -37,6 +39,7 @@ const iconMap: Record<string, React.ReactNode> = {
   postgresql: <SiPostgresql color="#4169E1" />,
   mysql: <SiMysql color="#4479A1" />,
   sqlite: <SiSqlite color="#003B57" />,
+  drizzle: <SiDrizzle color="#C5F74F" />,
   jwt: <SiJsonwebtokens color="#D63AFF" />,
   nodejs: <SiNodedotjs color="#5FA04E" />,
   git: <SiGit color="#F05032" />,
