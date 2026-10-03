@@ -63,18 +63,25 @@ export type Translation = {
       cloud: string;
       design: string;
     };
+    daily: string;
+    others: string;
   };
   projects: {
     title: string;
     highlight: string;
     subtitle: string;
     label: string;
-    moreProjects: string;
+    viewSite: string;
+    viewCode: string;
+    featured: string;
+    filters: Record<"all" | "web" | "mobile" | "desktop" | "iot", string>;
+    caseStudyLabels: { problem: string; solution: string; delivered: string };
     items: {
       id: string;
       title: string;
       description: string;
       tags: string[];
+      caseStudy?: { problem: string; solution: string; delivered: string[] };
     }[];
   };
   education: {
@@ -85,6 +92,7 @@ export type Translation = {
       school: string;
       description: string;
       year: string;
+      kind: "education" | "work";
     }[];
   };
   certificates: {
@@ -103,6 +111,16 @@ export type Translation = {
     connecting: string;
     success: string;
     error: string;
+    form: {
+      title: string;
+      name: string;
+      email: string;
+      message: string;
+      send: string;
+      sending: string;
+      sent: string;
+      failed: string;
+    };
   };
   footer: {
     about: string;
@@ -173,8 +191,8 @@ export const translations: Record<Locale, Translation> = {
     },
     aboutSection: {
       title: "About me &",
-      highlight: "Education",
-      educationLabel: "Education",
+      highlight: "Journey",
+      educationLabel: "Experience & Education",
       certificatesLabel: "Certificates",
     },
     skills: {
@@ -189,6 +207,8 @@ export const translations: Record<Locale, Translation> = {
         cloud: "Cloud & IoT",
         design: "Design",
       },
+      daily: "Everyday stack",
+      others: "Also worked with",
     },
     projects: {
       title: "My",
@@ -196,7 +216,11 @@ export const translations: Record<Locale, Translation> = {
       subtitle:
         "Projects built with a focus on practical solutions and modern technologies.",
       label: "Project",
-      moreProjects: "View Project",
+      viewSite: "Live site",
+      viewCode: "Code",
+      featured: "Featured",
+      filters: { all: "All", web: "Web", mobile: "Mobile", desktop: "Desktop", iot: "IoT" },
+      caseStudyLabels: { problem: "Challenge", solution: "Solution", delivered: "What I delivered" },
       items: [
         {
           id: "irrigation",
@@ -209,8 +233,19 @@ export const translations: Record<Locale, Translation> = {
           id: "rentcar",
           title: "Rent Car System",
           description:
-            "Full vehicle rental management system with modern interface.",
+            "Website for a car rental company in Mozambique, with services, fleet by category and booking requests.",
           tags: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
+          caseStudy: {
+            problem:
+              "A car rental company in Mozambique needed a website that presents its services and fleet and turns visitors into quote requests.",
+            solution:
+              "Next.js website with services (long and short-term rental, fleet management), fleet by category, discounts, FAQ and a booking form that stores requests in Supabase.",
+            delivered: [
+              "Fleet organised by category and city",
+              "Quote and booking requests saved in Supabase",
+              "Mobile-first layout, optimised images and SEO",
+            ],
+          },
         },
         {
           id: "matoladigital",
@@ -218,6 +253,18 @@ export const translations: Record<Locale, Translation> = {
           description:
             "Municipal transparency portal with a citizen service guide, request tracking by unique code, and an authenticated admin dashboard.",
           tags: ["Node.js", "Turso", "Drizzle ORM", "Vercel Blob"],
+          caseStudy: {
+            problem:
+              "Citizens had no simple way to check the requirements of municipal services or follow the status of their requests.",
+            solution:
+              "Transparency portal with a digital service guide, request submission with a PDF attachment, tracking by unique code and a protected admin panel.",
+            delivered: [
+              "Service guide with requirements, fees and deadlines",
+              "Requests with PDF upload and a tracking code",
+              "Admin panel to update each request's status",
+              "Public dashboard with aggregated statistics",
+            ],
+          },
         },
         {
           id: "dripgod",
@@ -231,6 +278,18 @@ export const translations: Record<Locale, Translation> = {
             "Framer Motion",
             "Resend",
           ],
+          caseStudy: {
+            problem:
+              "A Mozambican streetwear store wanted to sell imported clothes and sneakers online, to customers who like to confirm size and colour before paying.",
+            solution:
+              "Next.js e-commerce with collections, size selection, cart and wishlist, where checkout opens a WhatsApp conversation with the order ready.",
+            delivered: [
+              "Catalogue with collections, sizes and stock badges",
+              "Cart and wishlist",
+              "WhatsApp checkout",
+              "Animated interface with Framer Motion",
+            ],
+          },
         },
         {
           id: "landingpage",
@@ -264,6 +323,7 @@ export const translations: Record<Locale, Translation> = {
           school,
           description: "Matola, Mozambique",
           year: "2022 – Present",
+          kind: "education",
         },
         {
           degree: "Python Programming",
@@ -271,6 +331,15 @@ export const translations: Record<Locale, Translation> = {
           description:
             "Online courses and certifications in Python development",
           year: "2022 – 2023",
+          kind: "education",
+        },
+        {
+          degree: "Web & Systems Development",
+          school: "KS Pro Reprografia",
+          description:
+            "Built web applications and features with Java, JavaScript, React and PostgreSQL, maintained and optimised websites and systems, and helped model databases.",
+          year: "2021 – 2022",
+          kind: "work",
         },
       ],
     },
@@ -296,6 +365,16 @@ export const translations: Record<Locale, Translation> = {
       connecting: "Connecting...",
       success: "Opened successfully",
       error: "Unavailable — try again",
+      form: {
+        title: "Send me a message",
+        name: "Name",
+        email: "Email",
+        message: "Message",
+        send: "Send message",
+        sending: "Sending...",
+        sent: "Message sent! I'll get back to you soon.",
+        failed: "Couldn't send the message. Try WhatsApp or email.",
+      },
     },
     footer: {
       about: "About",
@@ -362,8 +441,8 @@ export const translations: Record<Locale, Translation> = {
     },
     aboutSection: {
       title: "Sobre Mim &",
-      highlight: "Educação",
-      educationLabel: "Formação académica",
+      highlight: "Percurso",
+      educationLabel: "Experiência e formação",
       certificatesLabel: "Certificados",
     },
     skills: {
@@ -378,6 +457,8 @@ export const translations: Record<Locale, Translation> = {
         cloud: "Cloud & IoT",
         design: "Design",
       },
+      daily: "Uso no dia a dia",
+      others: "Já trabalhei com",
     },
     projects: {
       title: "Os meus",
@@ -385,7 +466,11 @@ export const translations: Record<Locale, Translation> = {
       subtitle:
         "Projetos desenvolvidos com foco em soluções práticas e tecnologias modernas.",
       label: "Projeto",
-      moreProjects: "Ver Projeto",
+      viewSite: "Ver site",
+      viewCode: "Código",
+      featured: "Destaque",
+      filters: { all: "Todos", web: "Web", mobile: "Mobile", desktop: "Desktop", iot: "IoT" },
+      caseStudyLabels: { problem: "Desafio", solution: "Solução", delivered: "O que entreguei" },
       items: [
         {
           id: "irrigation",
@@ -398,8 +483,19 @@ export const translations: Record<Locale, Translation> = {
           id: "rentcar",
           title: "Sistema de Rent a Car",
           description:
-            "Sistema completo de gestão de aluguer de veículos com interface moderna.",
+            "Site para uma empresa de aluguer de viaturas em Moçambique, com serviços, frota por categoria e pedidos de reserva.",
           tags: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
+          caseStudy: {
+            problem:
+              "Uma empresa de aluguer de viaturas em Moçambique precisava de um site que apresentasse os serviços e a frota e transformasse visitas em pedidos de cotação.",
+            solution:
+              "Site em Next.js com serviços (aluguer de longa e curta duração, gestão de frota), frota por categoria, descontos, perguntas frequentes e formulário de reserva que guarda os pedidos no Supabase.",
+            delivered: [
+              "Frota organizada por categoria e cidade",
+              "Pedidos de cotação e reserva guardados no Supabase",
+              "Layout mobile-first, imagens otimizadas e SEO",
+            ],
+          },
         },
         {
           id: "matoladigital",
@@ -407,6 +503,18 @@ export const translations: Record<Locale, Translation> = {
           description:
             "Portal de transparência municipal com guia de serviços ao cidadão, rastreio de processos por código único, e painel administrativo autenticado.",
           tags: ["Node.js", "Turso", "Drizzle ORM", "Vercel Blob"],
+          caseStudy: {
+            problem:
+              "Os cidadãos não tinham uma forma simples de consultar os requisitos dos serviços municipais nem de acompanhar o estado dos seus processos.",
+            solution:
+              "Portal de transparência com guia digital de serviços, submissão de processos com anexo em PDF, rastreio por código único e painel administrativo protegido.",
+            delivered: [
+              "Guia de serviços com requisitos, taxas e prazos",
+              "Processos com anexo em PDF e código de rastreio",
+              "Painel administrativo para atualizar o estado de cada processo",
+              "Painel público com estatísticas agregadas",
+            ],
+          },
         },
         {
           id: "dripgod",
@@ -420,6 +528,18 @@ export const translations: Record<Locale, Translation> = {
             "Framer Motion",
             "Resend",
           ],
+          caseStudy: {
+            problem:
+              "Uma loja moçambicana de streetwear queria vender roupa e snikas importadas online, a clientes que gostam de confirmar tamanho e cor antes de pagar.",
+            solution:
+              "E-commerce em Next.js com colecções, escolha de tamanho, carrinho e favoritos, em que o checkout abre uma conversa no WhatsApp com a encomenda pronta.",
+            delivered: [
+              "Catálogo com colecções, tamanhos e avisos de stock",
+              "Carrinho e favoritos",
+              "Checkout via WhatsApp",
+              "Interface animada com Framer Motion",
+            ],
+          },
         },
         {
           id: "landingpage",
@@ -453,12 +573,22 @@ export const translations: Record<Locale, Translation> = {
           school: "Universidade Técnica Diogo Eugénio Guilande (UTDEG)",
           description: "Matola, Moçambique",
           year: "2022 – Presente",
+          kind: "education",
         },
         {
           degree: "Programação Python",
           school: "Coursera / Udemy",
           description: "Cursos e certificações em desenvolvimento Python",
           year: "2022 – 2023",
+          kind: "education",
+        },
+        {
+          degree: "Desenvolvimento Web e de Sistemas",
+          school: "KS Pro Reprografia",
+          description:
+            "Desenvolvi aplicações e funcionalidades web com Java, JavaScript, React e PostgreSQL, fiz manutenção e otimização de sites e sistemas, e colaborei na modelação de bases de dados.",
+          year: "2021 – 2022",
+          kind: "work",
         },
       ],
     },
@@ -484,6 +614,16 @@ export const translations: Record<Locale, Translation> = {
       connecting: "A ligar...",
       success: "Aberto com sucesso",
       error: "Indisponível — tente novamente",
+      form: {
+        title: "Envie-me uma mensagem",
+        name: "Nome",
+        email: "Email",
+        message: "Mensagem",
+        send: "Enviar mensagem",
+        sending: "A enviar...",
+        sent: "Mensagem enviada! Respondo em breve.",
+        failed: "Não foi possível enviar. Tente pelo WhatsApp ou email.",
+      },
     },
     footer: {
       about: "Sobre",
@@ -550,8 +690,8 @@ export const translations: Record<Locale, Translation> = {
     },
     aboutSection: {
       title: "À propos &",
-      highlight: "Formation",
-      educationLabel: "Formation académique",
+      highlight: "Parcours",
+      educationLabel: "Expérience et formation",
       certificatesLabel: "Certificats",
     },
     skills: {
@@ -566,6 +706,8 @@ export const translations: Record<Locale, Translation> = {
         cloud: "Cloud & IoT",
         design: "Design",
       },
+      daily: "Au quotidien",
+      others: "J'ai aussi utilisé",
     },
     projects: {
       title: "Mes",
@@ -573,7 +715,11 @@ export const translations: Record<Locale, Translation> = {
       subtitle:
         "Projets conçus pour des solutions pratiques et des technologies modernes.",
       label: "Projet",
-      moreProjects: "Voir le Projet",
+      viewSite: "Voir le site",
+      viewCode: "Code",
+      featured: "À la une",
+      filters: { all: "Tous", web: "Web", mobile: "Mobile", desktop: "Desktop", iot: "IoT" },
+      caseStudyLabels: { problem: "Défi", solution: "Solution", delivered: "Ce que j'ai livré" },
       items: [
         {
           id: "irrigation",
@@ -586,8 +732,19 @@ export const translations: Record<Locale, Translation> = {
           id: "rentcar",
           title: "Système de location de voitures",
           description:
-            "Système complet de gestion de location de véhicules avec interface moderne.",
+            "Site pour une société de location de voitures au Mozambique, avec services, flotte par catégorie et demandes de réservation.",
           tags: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
+          caseStudy: {
+            problem:
+              "Une société de location de voitures au Mozambique avait besoin d'un site présentant ses services et sa flotte, capable de transformer les visites en demandes de devis.",
+            solution:
+              "Site Next.js avec les services (location longue et courte durée, gestion de flotte), la flotte par catégorie, les remises, une FAQ et un formulaire de réservation qui enregistre les demandes dans Supabase.",
+            delivered: [
+              "Flotte organisée par catégorie et par ville",
+              "Demandes de devis et de réservation enregistrées dans Supabase",
+              "Mise en page mobile-first, images optimisées et SEO",
+            ],
+          },
         },
         {
           id: "matoladigital",
@@ -595,6 +752,18 @@ export const translations: Record<Locale, Translation> = {
           description:
             "Portail de transparence municipale avec guide des services aux citoyens, suivi des demandes par code unique, et tableau de bord admin authentifie.",
           tags: ["Node.js", "Turso", "Drizzle ORM", "Vercel Blob"],
+          caseStudy: {
+            problem:
+              "Les citoyens n'avaient pas de moyen simple de consulter les conditions des services municipaux ni de suivre l'état de leurs demandes.",
+            solution:
+              "Portail de transparence avec guide numérique des services, dépôt de demandes avec pièce jointe PDF, suivi par code unique et espace d'administration protégé.",
+            delivered: [
+              "Guide des services avec conditions, frais et délais",
+              "Demandes avec PDF et code de suivi",
+              "Espace admin pour mettre à jour chaque demande",
+              "Tableau de bord public avec statistiques agrégées",
+            ],
+          },
         },
         {
           id: "dripgod",
@@ -608,6 +777,18 @@ export const translations: Record<Locale, Translation> = {
             "Framer Motion",
             "Resend",
           ],
+          caseStudy: {
+            problem:
+              "Une boutique mozambicaine de streetwear voulait vendre en ligne des vêtements et sneakers importés, à des clients qui aiment confirmer taille et couleur avant de payer.",
+            solution:
+              "E-commerce Next.js avec collections, choix de taille, panier et favoris, où le paiement ouvre une conversation WhatsApp avec la commande prête.",
+            delivered: [
+              "Catalogue avec collections, tailles et alertes de stock",
+              "Panier et favoris",
+              "Commande via WhatsApp",
+              "Interface animée avec Framer Motion",
+            ],
+          },
         },
         {
           id: "landingpage",
@@ -641,12 +822,22 @@ export const translations: Record<Locale, Translation> = {
           school,
           description: "Matola, Mozambique",
           year: "2022 – Présent",
+          kind: "education",
         },
         {
           degree: "Programmation Python",
           school: "Coursera / Udemy",
           description: "Cours et certifications en développement Python",
           year: "2022 – 2023",
+          kind: "education",
+        },
+        {
+          degree: "Développement web et systèmes",
+          school: "KS Pro Reprografia",
+          description:
+            "Développement d'applications et de fonctionnalités web avec Java, JavaScript, React et PostgreSQL, maintenance et optimisation de sites et systèmes, et participation à la modélisation de bases de données.",
+          year: "2021 – 2022",
+          kind: "work",
         },
       ],
     },
@@ -672,6 +863,16 @@ export const translations: Record<Locale, Translation> = {
       connecting: "Connexion...",
       success: "Ouvert avec succès",
       error: "Indisponible — réessayez",
+      form: {
+        title: "Envoyez-moi un message",
+        name: "Nom",
+        email: "Email",
+        message: "Message",
+        send: "Envoyer",
+        sending: "Envoi...",
+        sent: "Message envoyé ! Je vous réponds bientôt.",
+        failed: "Échec de l'envoi. Essayez WhatsApp ou l'email.",
+      },
     },
     footer: {
       about: "À propos",

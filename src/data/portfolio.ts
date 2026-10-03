@@ -1,6 +1,19 @@
 // Ficheiros em public/ têm de respeitar o base do Vite (ex.: /portfolio/ no GitHub Pages).
 const publicAsset = (file: string) => `${import.meta.env.BASE_URL}${file}`;
 
+export type ProjectCategory = "web" | "mobile" | "desktop" | "iot";
+
+export type Project = {
+  id: string;
+  icon: string;
+  category: ProjectCategory;
+  featured?: boolean;
+  site?: string;
+  repo?: string;
+  image?: string;
+  livePreview?: boolean;
+};
+
 export const staticPortfolio = {
   name: "Zilton Tuaire Abdul",
   firstName: "Zilton",
@@ -11,24 +24,24 @@ export const staticPortfolio = {
       items: [
         { name: "HTML / CSS", icon: "html" },
         { name: "JavaScript", icon: "javascript" },
-        { name: "React", icon: "react" },
+        { name: "React", icon: "react", daily: true },
         { name: "React Native", icon: "reactnative" },
-        { name: "Next.js", icon: "nextjs" },
-        { name: "TypeScript", icon: "typescript" },
-        { name: "Tailwind CSS", icon: "tailwind" },
+        { name: "Next.js", icon: "nextjs", daily: true },
+        { name: "TypeScript", icon: "typescript", daily: true },
+        { name: "Tailwind CSS", icon: "tailwind", daily: true },
         { name: "Framer Motion", icon: "framer" },
       ],
     },
     {
       id: "backend",
       items: [
-        { name: "Python", icon: "python" },
+        { name: "Python", icon: "python", daily: true },
         { name: "Java (Swing)", icon: "java" },
         { name: "Spring Boot", icon: "springboot" },
         { name: "FastAPI", icon: "fastapi" },
-        { name: "Node.js", icon: "nodejs" },
+        { name: "Node.js", icon: "nodejs", daily: true },
         { name: "Express", icon: "express" },
-        { name: "PostgreSQL", icon: "postgresql" },
+        { name: "PostgreSQL", icon: "postgresql", daily: true },
         { name: "MySQL / MariaDB", icon: "mysql" },
         { name: "SQLite / Turso", icon: "sqlite" },
         { name: "Drizzle ORM", icon: "drizzle" },
@@ -39,8 +52,8 @@ export const staticPortfolio = {
     {
       id: "devops",
       items: [
-        { name: "Git", icon: "git" },
-        { name: "GitHub", icon: "github" },
+        { name: "Git", icon: "git", daily: true },
+        { name: "GitHub", icon: "github", daily: true },
         { name: "Docker", icon: "docker" },
       ],
     },
@@ -64,57 +77,73 @@ export const staticPortfolio = {
     },
   ],
 
+  // site: endereço publicado · repo: código no GitHub (tem de ser público).
   // livePreview: o card mostra o site real num iframe. Só para sites que permitem
   // ser incorporados (sem X-Frame-Options / frame-ancestors restritivos).
+  // featured: aparece em destaque, com o estudo de caso de t.projects.items[].caseStudy.
   projects: [
-    {
-      id: "irrigation",
-      icon: "leaf",
-      link: "https://marketing-digital-landingg.vercel.app/",
-      image: publicAsset("irrigation.png"),
-      livePreview: true,
-    },
     {
       id: "rentcar",
       icon: "car",
-      link: "https://rentacar-mz.vercel.app/",
+      category: "web",
+      featured: true,
+      site: "https://rentacar-mz.vercel.app/",
+      repo: "https://github.com/dev-zilton/rentacar-mz",
       image: publicAsset("rentacar-mz.png"),
+      livePreview: true,
+    },
+    {
+      id: "dripgod",
+      icon: "shirt",
+      category: "web",
+      featured: true,
+      site: "https://dripgod.vercel.app/",
+      image: publicAsset("dripgod.png"),
       livePreview: true,
     },
     {
       id: "matoladigital",
       icon: "landmark",
-      // O site (matola-digital.vercel.app) está em 404 — aponta para o código até voltar a ser publicado.
-      link: "https://github.com/dev-zilton/matola-digital",
+      category: "web",
+      featured: true,
+      // O site (matola-digital.vercel.app) está em 404 — volta a pôr `site` e `livePreview` quando for republicado.
+      repo: "https://github.com/dev-zilton/matola-digital",
       image: publicAsset("matola-digital.webp"),
     },
     {
-      id: "picasso",
-      icon: "cart",
-      link: "https://github.com/dev-zilton/SistemaVendasUnico.java",
-    },
-    {
-      id: "dripgod",
-      icon: "shirt",
-      link: "https://dripgod.vercel.app/",
-      image: publicAsset("dripgod.png"),
+      id: "irrigation",
+      icon: "leaf",
+      category: "web",
+      site: "https://marketing-digital-landingg.vercel.app/",
+      image: publicAsset("irrigation.png"),
       livePreview: true,
     },
     {
       id: "landingpage",
       icon: "layout",
-      link: "https://website-ten-iota-18.vercel.app/",
+      category: "web",
+      site: "https://website-ten-iota-18.vercel.app/",
+      repo: "https://github.com/dev-zilton/website",
       image: publicAsset("sweetlar.png"),
       livePreview: true,
     },
     {
       id: "startuplanding",
       icon: "rocket",
-      link: "https://startup-website-build.vercel.app/",
+      category: "web",
+      site: "https://startup-website-build.vercel.app/",
+      repo: "https://github.com/dev-zilton/startup-website-build",
       image: publicAsset("startuplanding.png"),
       livePreview: true,
     },
-  ],
+    {
+      id: "picasso",
+      icon: "cart",
+      category: "desktop",
+      repo: "https://github.com/dev-zilton/SistemaVendasUnico.java",
+      image: publicAsset("buy-easy-shop.webp"),
+    },
+  ] as Project[],
 
   resumeUrl: publicAsset("curriculo.pdf"),
 
