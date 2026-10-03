@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Leaf, Car, ShoppingCart, Code2, LayoutDashboard, Rocket, Shirt } from "lucide-react";
+import { Leaf, Car, ShoppingCart, Code2, LayoutDashboard, Rocket, Shirt, Landmark } from "lucide-react";
 import { useLanguage } from "../i18n/useLanguage";
 import { GlassCard } from "./ui/GlassCard";
 
@@ -11,6 +11,7 @@ const iconMap: Record<string, React.ReactNode> = {
   layout: <LayoutDashboard className="h-7 w-7" />,
   rocket: <Rocket className="h-7 w-7" />,
   shirt: <Shirt className="h-7 w-7" />,
+  landmark: <Landmark className="h-7 w-7" />,
 };
 
 // Largura de "ecrã de computador" a que o site é renderizado antes de ser reduzido.

@@ -84,9 +84,9 @@ export const staticPortfolio = {
     {
       id: "matoladigital",
       icon: "landmark",
-      link: "https://matola-digital.vercel.app/",
+      // O site (matola-digital.vercel.app) está em 404 — aponta para o código até voltar a ser publicado.
+      link: "https://github.com/dev-zilton/matola-digital",
       image: publicAsset("matola-digital.webp"),
-      livePreview: true,
     },
     {
       id: "picasso",
