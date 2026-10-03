@@ -98,6 +98,7 @@ export const staticPortfolio = {
       icon: "shirt",
       link: "https://dripgod.vercel.app/",
       image: publicAsset("dripgod.png"),
+      livePreview: true,
     },
     {
       id: "landingpage",
@@ -111,6 +112,7 @@ export const staticPortfolio = {
       icon: "rocket",
       link: "https://startup-website-build.vercel.app/",
       image: publicAsset("startuplanding.png"),
+      livePreview: true,
     },
   ],
 
