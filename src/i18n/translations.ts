@@ -131,9 +131,9 @@ export const translations: Record<Locale, Translation> = {
       available: "Available for projects",
       hi: "Hi, I'm",
       subtitle:
-        "IT professional and software developer passionate about technology.",
+        "Full Stack Developer — web, IoT and automation.",
       description:
-        "I focus on building real-world technological solutions using web development, IoT, automation, and software engineering.",
+        "I turn ideas into websites, systems and online stores ready to use, from design to deployment.",
       hireMe: "Hire Me",
       downloadResume: "Download Resume",
       metrics: [
@@ -158,7 +158,7 @@ export const translations: Record<Locale, Translation> = {
       title: "About",
       highlight: "Me",
       intro:
-        "I am Zilton Tuaire Abdul, an IT professional and software developer passionate about technology and innovation.",
+        "I'm Zilton Tuaire Abdul, a Software Engineering student and developer based in Matola, Mozambique.",
       interestsTitle: "I have experience and interest in:",
       interests: [
         "Web development systems",
@@ -167,9 +167,9 @@ export const translations: Record<Locale, Translation> = {
         "Artificial Intelligence fundamentals",
       ],
       closing:
-        "I enjoy building solutions that solve real problems using modern technologies.",
+        "I work with modern technologies and solid engineering practices to deliver code that works today and is easy to maintain tomorrow.",
       cardSummary:
-        "IT professional and software developer passionate about technology, web systems, IoT, automation, and AI.",
+        "Software Engineering student and developer focused on web, IoT, automation and AI.",
     },
     aboutSection: {
       title: "About me &",
@@ -260,10 +260,10 @@ export const translations: Record<Locale, Translation> = {
       highlight: "Education",
       items: [
         {
-          degree: "Bachelor's Degree in Computer Science",
+          degree: "Bachelor's Degree in Software Engineering",
           school,
-          description: "Information Systems programme — Matola, Mozambique",
-          year: "2022 – 2024",
+          description: "Matola, Mozambique",
+          year: "2022 – Present",
         },
         {
           degree: "Python Programming",
@@ -320,9 +320,9 @@ export const translations: Record<Locale, Translation> = {
       available: "Disponível para projetos",
       hi: "Olá, sou",
       subtitle:
-        "Informático e desenvolvedor de softwares apaixonado por tecnologia, focado em criar soluções reais com impacto.",
+        "Desenvolvedor Full Stack — web, IoT e automação.",
       description:
-        "Foco em criar soluções tecnológicas que resolvem problemas reais, com experiência em desenvolvimento web, IoT, automação e engenharia de software.",
+        "Transformo ideias em sites, sistemas e lojas online prontos a usar, do design ao deploy.",
       hireMe: "Contratar-me",
       downloadResume: "Descarregar CV",
       metrics: [
@@ -347,7 +347,7 @@ export const translations: Record<Locale, Translation> = {
       title: "Sobre",
       highlight: "Mim",
       intro:
-        "Sou Zilton Tuaire Abdul, licenciando em Informática e desenvolvedor de software apaixonado por tecnologia e inovação.",
+        "Sou Zilton Tuaire Abdul, licenciando em Engenharia de Software e desenvolvedor na Matola, Moçambique.",
       interestsTitle: "Tenho experiência e interesse em:",
       interests: [
         "Desenvolvimento web e aplicações modernas",
@@ -356,9 +356,9 @@ export const translations: Record<Locale, Translation> = {
         "Fundamentos de Inteligência Artificial",
       ],
       closing:
-        "Gosto de criar soluções que resolvem problemas reais com tecnologias actuais e boas práticas de engenharia.",
+        "Trabalho com tecnologias actuais e boas práticas de engenharia, para entregar código que funciona hoje e é fácil de manter amanhã.",
       cardSummary:
-        "Licenciando em Informática e desenvolvedor de software com foco em web, IoT, automação e IA.",
+        "Licenciando em Engenharia de Software e desenvolvedor com foco em web, IoT, automação e IA.",
     },
     aboutSection: {
       title: "Sobre Mim &",
@@ -449,11 +449,10 @@ export const translations: Record<Locale, Translation> = {
       highlight: "Educação",
       items: [
         {
-          degree: "Licenciatura em Informática",
+          degree: "Licenciatura em Engenharia de Software",
           school: "Universidade Técnica Diogo Eugénio Guilande (UTDEG)",
-          description:
-            "Formação em Engenharia de Softwares — Matola, Moçambique",
-          year: "2022 – 2024",
+          description: "Matola, Moçambique",
+          year: "2022 – Presente",
         },
         {
           degree: "Programação Python",
@@ -509,9 +508,9 @@ export const translations: Record<Locale, Translation> = {
       available: "Disponible pour des projets",
       hi: "Bonjour, je suis",
       subtitle:
-        "Informaticien et développeur de logiciels passionné par la technologie, axé sur des solutions réelles à fort impact.",
+        "Développeur Full Stack — web, IoT et automatisation.",
       description:
-        "Je me concentre sur la création de solutions technologiques concrètes en développement web, IoT, automatisation et ingénierie logicielle.",
+        "Je transforme des idées en sites, systèmes et boutiques en ligne prêts à l'emploi, du design au déploiement.",
       hireMe: "M'embaucher",
       downloadResume: "Télécharger le CV",
       metrics: [
@@ -536,7 +535,7 @@ export const translations: Record<Locale, Translation> = {
       title: "À",
       highlight: "propos",
       intro:
-        "Je suis Zilton Tuaire Abdul, informaticien et développeur de logiciels passionné par la technologie et l'innovation.",
+        "Je suis Zilton Tuaire Abdul, étudiant en génie logiciel et développeur à Matola, au Mozambique.",
       interestsTitle: "J'ai de l'expérience et de l'intérêt pour :",
       interests: [
         "Systèmes de développement web",
@@ -545,9 +544,9 @@ export const translations: Record<Locale, Translation> = {
         "Fondamentaux de l'intelligence artificielle",
       ],
       closing:
-        "J'aime créer des solutions qui résolvent de vrais problèmes avec des technologies modernes.",
+        "Je travaille avec des technologies modernes et de bonnes pratiques d'ingénierie pour livrer un code qui fonctionne aujourd'hui et reste facile à maintenir demain.",
       cardSummary:
-        "Informaticien et développeur de logiciels passionné par la technologie, le web, l'IoT, l'automatisation et l'IA.",
+        "Étudiant en génie logiciel et développeur axé sur le web, l'IoT, l'automatisation et l'IA.",
     },
     aboutSection: {
       title: "À propos &",
@@ -638,10 +637,10 @@ export const translations: Record<Locale, Translation> = {
       highlight: "Formation",
       items: [
         {
-          degree: "Licence en informatique",
+          degree: "Licence en génie logiciel",
           school,
-          description: "Systèmes informatiques — Matola, Mozambique",
-          year: "2022 – 2024",
+          description: "Matola, Mozambique",
+          year: "2022 – Présent",
         },
         {
           degree: "Programmation Python",

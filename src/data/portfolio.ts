@@ -64,24 +64,29 @@ export const staticPortfolio = {
     },
   ],
 
+  // livePreview: o card mostra o site real num iframe. Só para sites que permitem
+  // ser incorporados (sem X-Frame-Options / frame-ancestors restritivos).
   projects: [
     {
       id: "irrigation",
       icon: "leaf",
       link: "https://marketing-digital-landingg.vercel.app/",
       image: publicAsset("irrigation.png"),
+      livePreview: true,
     },
     {
       id: "rentcar",
       icon: "car",
       link: "https://rentacar-mz.vercel.app/",
       image: publicAsset("rentacar-mz.png"),
+      livePreview: true,
     },
     {
       id: "matoladigital",
       icon: "landmark",
       link: "https://matola-digital.vercel.app/",
       image: publicAsset("matola-digital.webp"),
+      livePreview: true,
     },
     {
       id: "picasso",
@@ -91,7 +96,7 @@ export const staticPortfolio = {
     {
       id: "dripgod",
       icon: "shirt",
-      link: "https://fashion-website-improvements.vercel.app/",
+      link: "https://dripgod.vercel.app/",
       image: publicAsset("dripgod.png"),
     },
     {
@@ -99,6 +104,7 @@ export const staticPortfolio = {
       icon: "layout",
       link: "https://website-ten-iota-18.vercel.app/",
       image: publicAsset("sweetlar.png"),
+      livePreview: true,
     },
     {
       id: "startuplanding",

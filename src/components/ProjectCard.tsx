@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import { Leaf, Car, ShoppingCart, Code2, LayoutDashboard, Rocket, Shirt } from "lucide-react";
 import { useLanguage } from "../i18n/useLanguage";
 import { GlassCard } from "./ui/GlassCard";
@@ -12,9 +13,61 @@ const iconMap: Record<string, React.ReactNode> = {
   shirt: <Shirt className="h-7 w-7" />,
 };
 
+// Largura de "ecrã de computador" a que o site é renderizado antes de ser reduzido.
+const PREVIEW_VIEWPORT = 1280;
+
+function LivePreview({ url, title, fallbackImage }: { url: string; title: string; fallbackImage?: string }) {
+  const frameRef = useRef<HTMLDivElement>(null);
+  const [scale, setScale] = useState(0);
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    const frame = frameRef.current;
+    if (!frame) return;
+    const observer = new ResizeObserver(([entry]) => {
+      setScale(entry.contentRect.width / PREVIEW_VIEWPORT);
+    });
+    observer.observe(frame);
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div ref={frameRef} className="relative aspect-[16/10] w-full overflow-hidden bg-[#0f172a]">
+      {fallbackImage && (
+        <img
+          src={fallbackImage}
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
+          decoding="async"
+          className={`absolute inset-0 h-full w-full object-cover object-top transition-opacity duration-500 ${loaded ? "opacity-0" : "opacity-100"}`}
+        />
+      )}
+      {scale > 0 && (
+        <iframe
+          src={url}
+          title={title}
+          loading="lazy"
+          tabIndex={-1}
+          aria-hidden="true"
+          sandbox="allow-scripts allow-same-origin"
+          onLoad={() => setLoaded(true)}
+          className={`pointer-events-none absolute left-0 top-0 origin-top-left border-0 transition-opacity duration-500 ${loaded ? "opacity-100" : "opacity-0"}`}
+          style={{
+            width: PREVIEW_VIEWPORT,
+            height: PREVIEW_VIEWPORT * (10 / 16),
+            transform: `scale(${scale})`,
+          }}
+        />
+      )}
+    </div>
+  );
+}
+
 type ProjectCardProps = {
   icon: string;
   imageUrl?: string;
+  livePreview?: boolean;
   link: string;
   title: string;
   description: string;
@@ -24,6 +77,7 @@ type ProjectCardProps = {
 export function ProjectCard({
   icon,
   imageUrl,
+  livePreview,
   link,
   title,
   description,
@@ -35,22 +89,26 @@ export function ProjectCard({
   return (
     <GlassCard className="group overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:scale-[1.03] hover:shadow-2xl hover:shadow-turquoise-400/10">
       <div className="space-y-3">
-        {imageUrl && (
+        {(imageUrl || livePreview) && (
           <div className="-mx-5 -mt-5 mb-3 overflow-hidden rounded-t-2xl border-b border-white/10 bg-[#1e1e1e]">
             <div className="flex items-center gap-1.5 px-3 py-2.5">
               <span className="h-2.5 w-2.5 rounded-full bg-red-500/70" />
               <span className="h-2.5 w-2.5 rounded-full bg-yellow-500/70" />
               <span className="h-2.5 w-2.5 rounded-full bg-green-500/70" />
             </div>
-            <img
-              src={imageUrl}
-              alt={title}
-              width={640}
-              height={160}
-              loading="lazy"
-              decoding="async"
-              className="h-40 w-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
-            />
+            {livePreview ? (
+              <LivePreview url={link} title={title} fallbackImage={imageUrl} />
+            ) : (
+              <img
+                src={imageUrl}
+                alt={title}
+                width={640}
+                height={400}
+                loading="lazy"
+                decoding="async"
+                className="aspect-[16/10] w-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
+              />
+            )}
           </div>
         )}
 

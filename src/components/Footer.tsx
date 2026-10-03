@@ -35,7 +35,6 @@ export function Footer({ scrollToSection }: FooterProps) {
               key={id}
               type="button"
               onClick={() => scrollToSection(id)}
-              aria-label={`Ir para secção ${footerLabels[id]}`}
               className="text-sm text-copy-muted transition-colors hover:text-copy"
             >
               {footerLabels[id]}
@@ -59,7 +58,7 @@ export function Footer({ scrollToSection }: FooterProps) {
 
         {/* COPYRIGHT */}
         <p className="text-copy-muted">
-          © 2024 {staticPortfolio.name}. {t.footer.rights}
+          © {new Date().getFullYear()} {staticPortfolio.name}. {t.footer.rights}
         </p>
 
         <p className="text-sm text-copy-muted/70">{t.footer.built}</p>
