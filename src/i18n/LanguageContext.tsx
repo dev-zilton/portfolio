@@ -1,28 +1,14 @@
 import {
-  createContext,
   useCallback,
-  useContext,
   useEffect,
   useMemo,
   useState,
   type ReactNode,
 } from "react";
-import { staticPortfolio } from "../data/portfolio";
-import {
-  translations,
-  type Locale,
-  type Translation,
-} from "./translations";
+import { translations, type Locale } from "./translations";
+import { LanguageContext } from "./useLanguage";
 
 const STORAGE_KEY = "portfolio-locale";
-
-type LanguageContextValue = {
-  locale: Locale;
-  setLocale: (locale: Locale) => void;
-  t: Translation;
-};
-
-const LanguageContext = createContext<LanguageContextValue | null>(null);
 
 function getInitialLocale(): Locale {
   if (typeof window === "undefined") return "en";
@@ -61,20 +47,4 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
       {children}
     </LanguageContext.Provider>
   );
-}
-
-export function useLanguage() {
-  const ctx = useContext(LanguageContext);
-  if (!ctx) {
-    throw new Error("useLanguage must be used within LanguageProvider");
-  }
-  return ctx;
-}
-
-export function useProjectsWithLinks() {
-  const { t } = useLanguage();
-  return t.projects.items.map((item) => ({
-    ...item,
-    ...staticPortfolio.projects.find((p) => p.id === item.id)!,
-  }));
 }

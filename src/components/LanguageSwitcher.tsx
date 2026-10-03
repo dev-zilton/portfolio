@@ -1,5 +1,5 @@
 import { locales } from "../i18n/translations";
-import { useLanguage } from "../i18n/LanguageContext";
+import { useLanguage } from "../i18n/useLanguage";
 
 export function LanguageSwitcher({ className = "" }: { className?: string }) {
   const { locale, setLocale } = useLanguage();

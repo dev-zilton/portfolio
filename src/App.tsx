@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect, useState } from "react";
-import { useLanguage, useProjectsWithLinks } from "./i18n/LanguageContext";
+import { useLanguage, useProjectsWithLinks } from "./i18n/useLanguage";
 import { useTheme } from "./hooks/useTheme";
 import { Hero } from "./components/Hero";
 import { Navbar } from "./components/Navbar";
@@ -48,7 +48,7 @@ function PortfolioContent() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-surface dark:bg-surface font-sans transition-colors duration-300" style={{ cursor: "none" }}>
+    <div className="min-h-screen bg-surface dark:bg-surface font-sans transition-colors duration-300">
       <ScrollProgressBar />
       <CustomCursor />
       <Navbar

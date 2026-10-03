@@ -1,7 +1,7 @@
 import profileImage from "../assets/profile.webp";
 import { ParticleBackground } from "./ParticleBackground";
 import { staticPortfolio, totalSkillsCount, totalProjectsCount } from "../data/portfolio";
-import { useLanguage } from "../i18n/LanguageContext";
+import { useLanguage } from "../i18n/useLanguage";
 import { PrimaryButton } from "./ui/PrimaryButton";
 
 type HeroProps = {
@@ -52,7 +52,7 @@ export function Hero({ onContact }: HeroProps) {
               <PrimaryButton onClick={onContact}>{t.hero.hireMe}</PrimaryButton>
 
               <a
-                href="/curriculo.pdf"
+                href={staticPortfolio.resumeUrl}
                 download="Curriculo_Zilton_Dev.pdf"
                 className="btn-secondary"
               >

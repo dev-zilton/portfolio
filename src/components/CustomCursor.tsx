@@ -1,13 +1,32 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
+
+// Só substitui o cursor nativo quando há rato e o utilizador não pediu menos animação.
+const CURSOR_QUERY = "(pointer: fine) and (prefers-reduced-motion: no-preference)";
+
+function useFinePointer() {
+  const [enabled, setEnabled] = useState(() => window.matchMedia(CURSOR_QUERY).matches);
+
+  useEffect(() => {
+    const media = window.matchMedia(CURSOR_QUERY);
+    const onChange = () => setEnabled(media.matches);
+    media.addEventListener("change", onChange);
+    return () => media.removeEventListener("change", onChange);
+  }, []);
+
+  return enabled;
+}
 
 export function CustomCursor() {
+  const enabled = useFinePointer();
   const dotRef = useRef<HTMLDivElement>(null);
   const ringRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const dot = dotRef.current;
     const ring = ringRef.current;
-    if (!dot || !ring) return;
+    if (!enabled || !dot || !ring) return;
+
+    document.body.style.cursor = "none";
 
     let mouseX = window.innerWidth / 2;
     let mouseY = window.innerHeight / 2;
@@ -32,7 +51,7 @@ export function CustomCursor() {
     };
 
     const onLeaveDoc = (e: MouseEvent) => {
-      if (!e.relatedTarget && !(e as any).toElement) {
+      if (!e.relatedTarget) {
         visible = false;
         dot.style.opacity = "0";
         ring.style.opacity = "0";
@@ -51,11 +70,14 @@ export function CustomCursor() {
     animate();
 
     return () => {
+      document.body.style.cursor = "";
       cancelAnimationFrame(animId);
       document.removeEventListener("mousemove", onMove);
       document.removeEventListener("mouseout", onLeaveDoc);
     };
-  }, []);
+  }, [enabled]);
+
+  if (!enabled) return null;
 
   const base: React.CSSProperties = {
     position: "fixed",

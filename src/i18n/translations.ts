@@ -222,19 +222,28 @@ export const translations: Record<Locale, Translation> = {
         {
           id: "dripgod",
           title: "DripGOd E-commerce",
-          description: "Premium Mozambican fashion store, with shopping cart, wishlist and WhatsApp checkout.",
-          tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Resend"],
+          description:
+            "Premium Mozambican fashion store, with shopping cart, wishlist and WhatsApp checkout.",
+          tags: [
+            "Next.js",
+            "TypeScript",
+            "Tailwind CSS",
+            "Framer Motion",
+            "Resend",
+          ],
         },
         {
           id: "landingpage",
           title: "SweetLar Mozambique",
-          description: "High-end custom-made furniture. Choose the color, the ideal size, and personalize your comfort.",
+          description:
+            "High-end custom-made furniture. Choose the color, the ideal size, and personalize your comfort.",
           tags: ["React", "Tailwind CSS", "E-commerce"],
         },
         {
           id: "startuplanding",
           title: "Soluções Digitais MZ",
-          description: "Full corporate website for a digital agency in Mozambique, with dedicated sections for services, pricing, testimonials, FAQ and contact — built to convert visitors into clients.",
+          description:
+            "Full corporate website for a digital agency in Mozambique, with dedicated sections for services, pricing, testimonials, FAQ and contact — built to convert visitors into clients.",
           tags: ["Next.js", "React", "Tailwind CSS"],
         },
         {
@@ -382,7 +391,7 @@ export const translations: Record<Locale, Translation> = {
           id: "irrigation",
           title: "Marketing Digital Landing Page",
           description:
-            "Landing page profissional e responsiva para captura de leads de curso online, com depoimentos, beneficios, FAQ e integracao com ActiveCampaign.",
+            "Landing page profissional e responsiva para captura de leads de curso online, com depoimentos, benefícios, FAQ e integração com ActiveCampaign.",
           tags: ["HTML/CSS", "JavaScript", "React", "Responsivo"],
         },
         {
@@ -402,19 +411,28 @@ export const translations: Record<Locale, Translation> = {
         {
           id: "dripgod",
           title: "E-commerce DripGOd",
-          description: "Loja de moda premium moçambicana, com carrinho de compras, favoritos e checkout via WhatsApp.",
-          tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Resend"],
+          description:
+            "Loja de moda premium moçambicana, com carrinho de compras, favoritos e checkout via WhatsApp.",
+          tags: [
+            "Next.js",
+            "TypeScript",
+            "Tailwind CSS",
+            "Framer Motion",
+            "Resend",
+          ],
         },
         {
           id: "landingpage",
           title: "SweetLar Moçambique",
-          description: "Loja de móveis sob medida, com personalização de cor e tamanho para um conforto premium.",
+          description:
+            "Loja de móveis sob medida, com personalização de cor e tamanho para um conforto premium.",
           tags: ["React", "Tailwind CSS", "E-commerce"],
         },
         {
           id: "startuplanding",
           title: "Soluções Digitais MZ",
-          description: "Website institucional completo para uma agencia digital mocambicana, com seccoes de servicos, precos, depoimentos, FAQ e contacto — pensado para converter visitantes em clientes.",
+          description:
+            "Website institucional completo para uma agência digital moçambicana, com secções de serviços, preços, depoimentos, FAQ e contacto — pensado para converter visitantes em clientes.",
           tags: ["Next.js", "React", "Tailwind CSS"],
         },
         {
@@ -433,7 +451,8 @@ export const translations: Record<Locale, Translation> = {
         {
           degree: "Licenciatura em Informática",
           school: "Universidade Técnica Diogo Eugénio Guilande (UTDEG)",
-          description: "Formação em Engenharia de Softwares — Matola, Moçambique",
+          description:
+            "Formação em Engenharia de Softwares — Matola, Moçambique",
           year: "2022 – 2024",
         },
         {
@@ -581,19 +600,28 @@ export const translations: Record<Locale, Translation> = {
         {
           id: "dripgod",
           title: "E-commerce DripGOd",
-          description: "Boutique de mode premium mozambicaine, avec panier, favoris et paiement via WhatsApp.",
-          tags: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Resend"],
+          description:
+            "Boutique de mode premium mozambicaine, avec panier, favoris et paiement via WhatsApp.",
+          tags: [
+            "Next.js",
+            "TypeScript",
+            "Tailwind CSS",
+            "Framer Motion",
+            "Resend",
+          ],
         },
         {
           id: "landingpage",
           title: "SweetLar Mozambique",
-          description: "Meubles sur mesure haut de gamme. Choisissez la couleur, la taille ideale et personnalisez votre confort.",
+          description:
+            "Meubles sur mesure haut de gamme. Choisissez la couleur, la taille ideale et personnalisez votre confort.",
           tags: ["React", "Tailwind CSS", "E-commerce"],
         },
         {
           id: "startuplanding",
           title: "Soluções Digitais MZ",
-          description: "Site institutionnel complet pour une agence digitale mozambicaine, avec des sections dediees aux services, tarifs, temoignages, FAQ et contact — concu pour convertir les visiteurs en clients.",
+          description:
+            "Site institutionnel complet pour une agence digitale mozambicaine, avec des sections dediees aux services, tarifs, temoignages, FAQ et contact — concu pour convertir les visiteurs en clients.",
           tags: ["Next.js", "React", "Tailwind CSS"],
         },
         {

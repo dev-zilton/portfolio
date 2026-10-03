@@ -1,5 +1,5 @@
 import { Leaf, Car, ShoppingCart, Code2, LayoutDashboard, Rocket, Shirt } from "lucide-react";
-import { useLanguage } from "../i18n/LanguageContext";
+import { useLanguage } from "../i18n/useLanguage";
 import { GlassCard } from "./ui/GlassCard";
 
 const iconMap: Record<string, React.ReactNode> = {
@@ -45,6 +45,10 @@ export function ProjectCard({
             <img
               src={imageUrl}
               alt={title}
+              width={640}
+              height={160}
+              loading="lazy"
+              decoding="async"
               className="h-40 w-full object-cover object-top transition-transform duration-500 group-hover:scale-110"
             />
           </div>
@@ -83,7 +87,7 @@ export function ProjectCard({
           target="_blank"
           rel="noopener noreferrer"
           className="group/link mt-2 inline-flex w-full items-center justify-between rounded-xl bg-glass/10 px-4 py-2.5 text-sm font-medium text-copy transition-all duration-300 hover:bg-turquoise-400/15 hover:text-turquoise-300 focus:outline-none focus:ring-2 focus:ring-turquoise-400/30"
-          aria-label={`Abrir projeto: ${title}`}
+          aria-label={`${t.projects.moreProjects}: ${title}`}
         >
           {t.projects.moreProjects}
           <span className="transition-transform duration-300 group-hover/link:translate-x-1">

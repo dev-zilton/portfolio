@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Moon, Sun } from "lucide-react";
 import { staticPortfolio } from "../data/portfolio";
-import { useLanguage } from "../i18n/LanguageContext";
+import { useLanguage } from "../i18n/useLanguage";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { PrimaryButton } from "./ui/PrimaryButton";
 
