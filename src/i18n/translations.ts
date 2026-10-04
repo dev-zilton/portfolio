@@ -155,9 +155,9 @@ export const translations: Record<Locale, Translation> = {
       hireMe: "Hire Me",
       downloadResume: "Download Resume",
       metrics: [
-        { value: "8+", label: "Technical Skills" },
-        { value: "4+", label: "Projects Delivered" },
-        { value: "2022", label: "Building Since" },
+        { value: "", label: "Projects Delivered" },
+        { value: "", label: "Everyday Technologies" },
+        { value: "2021", label: "Coding Since" },
       ],
     },
     offer: {
@@ -231,7 +231,7 @@ export const translations: Record<Locale, Translation> = {
         },
         {
           id: "rentcar",
-          title: "Rent Car System",
+          title: "K&K — Car Rental",
           description:
             "Website for a car rental company in Mozambique, with services, fleet by category and booking requests.",
           tags: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
@@ -405,9 +405,9 @@ export const translations: Record<Locale, Translation> = {
       hireMe: "Contratar-me",
       downloadResume: "Descarregar CV",
       metrics: [
-        { value: "8+", label: "Competências Técnicas" },
-        { value: "4+", label: "Projetos Entregues" },
-        { value: "2022", label: "A construir desde" },
+        { value: "", label: "Projetos entregues" },
+        { value: "", label: "Tecnologias do dia a dia" },
+        { value: "2021", label: "A programar desde" },
       ],
     },
     offer: {
@@ -481,7 +481,7 @@ export const translations: Record<Locale, Translation> = {
         },
         {
           id: "rentcar",
-          title: "Sistema de Rent a Car",
+          title: "K&K — Aluguer de Viaturas",
           description:
             "Site para uma empresa de aluguer de viaturas em Moçambique, com serviços, frota por categoria e pedidos de reserva.",
           tags: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
@@ -654,9 +654,9 @@ export const translations: Record<Locale, Translation> = {
       hireMe: "M'embaucher",
       downloadResume: "Télécharger le CV",
       metrics: [
-        { value: "8+", label: "Compétences techniques" },
-        { value: "4+", label: "Projets réalisés" },
-        { value: "2022", label: "Actif depuis" },
+        { value: "", label: "Projets réalisés" },
+        { value: "", label: "Technologies au quotidien" },
+        { value: "2021", label: "Je code depuis" },
       ],
     },
     offer: {
@@ -730,7 +730,7 @@ export const translations: Record<Locale, Translation> = {
         },
         {
           id: "rentcar",
-          title: "Système de location de voitures",
+          title: "K&K — Location de voitures",
           description:
             "Site pour une société de location de voitures au Mozambique, avec services, flotte par catégorie et demandes de réservation.",
           tags: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],

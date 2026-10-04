@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { prefersReducedMotion } from "../hooks/reducedMotion";
 
 type Particle = {
   x: number;
@@ -19,12 +20,15 @@ export function ParticleBackground() {
     if (!ctx) return;
 
     let animId: number;
+    // Com movimento reduzido desenha as partículas uma vez, paradas.
+    const animate = !prefersReducedMotion();
     const particles: Particle[] = [];
     const COUNT = 60;
 
     const resize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
+      if (!animate && particles.length) draw();
     };
     resize();
     window.addEventListener("resize", resize);
@@ -44,8 +48,10 @@ export function ParticleBackground() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       for (const p of particles) {
-        p.x += p.vx;
-        p.y += p.vy;
+        if (animate) {
+          p.x += p.vx;
+          p.y += p.vy;
+        }
         if (p.x < 0) p.x = canvas.width;
         if (p.x > canvas.width) p.x = 0;
         if (p.y < 0) p.y = canvas.height;
@@ -73,7 +79,7 @@ export function ParticleBackground() {
         }
       }
 
-      animId = requestAnimationFrame(draw);
+      if (animate) animId = requestAnimationFrame(draw);
     };
 
     draw();

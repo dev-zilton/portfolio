@@ -1,12 +1,14 @@
 import { useEffect, useRef, useState } from "react";
+import { prefersReducedMotion } from "./reducedMotion";
 
 export function useScrollAnimation(threshold = 0.15) {
   const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
+  // Com movimento reduzido o conteúdo aparece logo, sem esperar pelo scroll.
+  const [visible, setVisible] = useState(prefersReducedMotion);
 
   useEffect(() => {
     const el = ref.current;
-    if (!el) return;
+    if (!el || visible) return;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -18,7 +20,7 @@ export function useScrollAnimation(threshold = 0.15) {
     );
     observer.observe(el);
     return () => observer.disconnect();
-  }, [threshold]);
+  }, [threshold, visible]);
 
   return { ref, visible };
 }

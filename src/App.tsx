@@ -6,6 +6,7 @@ import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { ScrollProgressBar } from "./components/ScrollProgressBar";
 import { CustomCursor } from "./components/CustomCursor";
+import { prefersReducedMotion } from "./hooks/reducedMotion";
 
 const AboutSection = lazy(() => import("./sections/AboutSection"));
 const SkillsSection = lazy(() => import("./sections/SkillsSection"));
@@ -27,7 +28,7 @@ function PortfolioContent() {
 
   const scrollToSection = (sectionId: string) => {
     setActiveSection(sectionId as SectionId);
-    document.getElementById(sectionId)?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: prefersReducedMotion() ? "auto" : "smooth" });
   };
 
   useEffect(() => {

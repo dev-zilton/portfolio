@@ -164,8 +164,7 @@ export type Skill = SkillCategory["items"][number];
 
 // Totais calculados a partir dos dados reais acima — nunca ficam desatualizados
 // quando adicionas ou removes skills/projetos.
-export const totalSkillsCount = staticPortfolio.skillCategories.reduce(
-  (sum, category) => sum + category.items.length,
-  0,
-);
+export const dailySkillsCount = staticPortfolio.skillCategories
+  .flatMap((category) => category.items)
+  .filter((skill) => skill.daily).length;
 export const totalProjectsCount = staticPortfolio.projects.length;
