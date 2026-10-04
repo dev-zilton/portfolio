@@ -1,4 +1,4 @@
-import { Briefcase, ChevronRight, GraduationCap } from "lucide-react";
+import { Briefcase, ChevronRight, ExternalLink, GraduationCap } from "lucide-react";
 import { GlassCard } from "../components/ui/GlassCard";
 import { SectionHeading } from "../components/ui/SectionHeading";
 import { AnimatedSection } from "../components/ui/AnimatedSection";
@@ -43,7 +43,19 @@ export default function AboutSection({ t }: { t: Translation }) {
                             <div className="flex flex-col gap-1">
                               <span className="text-xs font-semibold text-turquoise-300">{item.year}</span>
                               <span className="text-sm font-semibold text-copy">{item.degree}</span>
-                              <span className="text-xs text-copy-muted">{item.school}</span>
+                              {item.link ? (
+                                <a
+                                  href={item.link}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="inline-flex w-fit items-center gap-1 text-xs text-copy-muted underline-offset-2 hover:text-turquoise-300 hover:underline"
+                                >
+                                  {item.school}
+                                  <ExternalLink size={11} aria-hidden="true" />
+                                </a>
+                              ) : (
+                                <span className="text-xs text-copy-muted">{item.school}</span>
+                              )}
                               {item.description ? <span className="mt-1 text-sm text-copy-muted">{item.description}</span> : null}
                             </div>
                           </GlassCard>

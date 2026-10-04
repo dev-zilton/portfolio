@@ -93,6 +93,7 @@ export type Translation = {
       description: string;
       year: string;
       kind: "education" | "work";
+      link?: string;
     }[];
   };
   certificates: {
@@ -340,6 +341,15 @@ export const translations: Record<Locale, Translation> = {
             "Built web applications and features with Java, JavaScript, React and PostgreSQL, maintained and optimised websites and systems, and helped model databases.",
           year: "2021 – 2022",
           kind: "work",
+        },
+        {
+          degree: "Content Management",
+          school: "Linha de Fundo",
+          description:
+            "Content management for a Facebook sports page with over 4,000 followers: planning and publishing posts.",
+          year: "2025 – Present",
+          kind: "work",
+          link: "https://www.facebook.com/profile.php?id=100064196370490",
         },
       ],
     },
@@ -590,6 +600,15 @@ export const translations: Record<Locale, Translation> = {
           year: "2021 – 2022",
           kind: "work",
         },
+        {
+          degree: "Gestão de Conteúdos",
+          school: "Linha de Fundo",
+          description:
+            "Gestão de conteúdos de uma página de desporto no Facebook com mais de 4 000 seguidores: planeamento e publicação de publicações.",
+          year: "2025 – Presente",
+          kind: "work",
+          link: "https://www.facebook.com/profile.php?id=100064196370490",
+        },
       ],
     },
     certificates: {
@@ -838,6 +857,15 @@ export const translations: Record<Locale, Translation> = {
             "Développement d'applications et de fonctionnalités web avec Java, JavaScript, React et PostgreSQL, maintenance et optimisation de sites et systèmes, et participation à la modélisation de bases de données.",
           year: "2021 – 2022",
           kind: "work",
+        },
+        {
+          degree: "Gestion de contenu",
+          school: "Linha de Fundo",
+          description:
+            "Gestion du contenu d'une page sportive sur Facebook de plus de 4 000 abonnés : planification et publication des posts.",
+          year: "2025 – Présent",
+          kind: "work",
+          link: "https://www.facebook.com/profile.php?id=100064196370490",
         },
       ],
     },
