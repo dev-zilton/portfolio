@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { Leaf, Car, ShoppingCart, Code2, LayoutDashboard, Rocket, Shirt, Landmark, ExternalLink, Star } from "lucide-react";
+import { Leaf, Car, ShoppingCart, Code2, LayoutDashboard, Rocket, Shirt, Landmark, Trophy, ExternalLink, Star } from "lucide-react";
 import { useLanguage } from "../i18n/useLanguage";
 import { GlassCard } from "./ui/GlassCard";
 import { GitHubIcon } from "./ui/GitHubIcon";
@@ -15,6 +15,7 @@ const iconMap: Record<string, React.ReactNode> = {
   rocket: <Rocket className="h-7 w-7" />,
   shirt: <Shirt className="h-7 w-7" />,
   landmark: <Landmark className="h-7 w-7" />,
+  trophy: <Trophy className="h-7 w-7" />,
 };
 
 export type ProjectView = Project & Translation["projects"]["items"][number];
@@ -119,6 +120,8 @@ function BrowserFrame({ project, className = "" }: { project: ProjectView; class
 
 function ProjectLinks({ project }: { project: ProjectView }) {
   const { t } = useLanguage();
+  // Páginas de redes sociais não são "sites": o botão diz "Ver página".
+  const siteLabel = project.category === "social" ? t.projects.viewPage : t.projects.viewSite;
   const base =
     "group/link inline-flex flex-1 items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-turquoise-400/30";
   return (
@@ -129,10 +132,10 @@ function ProjectLinks({ project }: { project: ProjectView }) {
           target="_blank"
           rel="noopener noreferrer"
           className={`${base} bg-turquoise-400/15 text-turquoise-300 hover:bg-turquoise-400/25`}
-          aria-label={`${t.projects.viewSite}: ${project.title}`}
+          aria-label={`${siteLabel}: ${project.title}`}
         >
           <ExternalLink size={16} aria-hidden="true" />
-          {t.projects.viewSite}
+          {siteLabel}
         </a>
       )}
       {project.repo && (

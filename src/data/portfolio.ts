@@ -1,7 +1,7 @@
 // Ficheiros em public/ têm de respeitar o base do Vite (ex.: /portfolio/ no GitHub Pages).
 const publicAsset = (file: string) => `${import.meta.env.BASE_URL}${file}`;
 
-export type ProjectCategory = "web" | "mobile" | "desktop" | "iot";
+export type ProjectCategory = "web" | "mobile" | "desktop" | "iot" | "social";
 
 export type Project = {
   id: string;
@@ -109,6 +109,14 @@ export const staticPortfolio = {
       // O site (matola-digital.vercel.app) está em 404 — volta a pôr `site` e `livePreview` quando for republicado.
       repo: "https://github.com/dev-zilton/matola-digital",
       image: publicAsset("matola-digital.webp"),
+    },
+    {
+      id: "linhadefundo",
+      icon: "trophy",
+      category: "social",
+      featured: true,
+      site: "https://www.facebook.com/profile.php?id=100064196370490",
+      image: publicAsset("linha-de-fundo.webp"),
     },
     {
       id: "irrigation",

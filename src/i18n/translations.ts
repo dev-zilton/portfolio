@@ -73,8 +73,9 @@ export type Translation = {
     label: string;
     viewSite: string;
     viewCode: string;
+    viewPage: string;
     featured: string;
-    filters: Record<"all" | "web" | "mobile" | "desktop" | "iot", string>;
+    filters: Record<"all" | "web" | "mobile" | "desktop" | "iot" | "social", string>;
     caseStudyLabels: { problem: string; solution: string; delivered: string };
     items: {
       id: string;
@@ -219,10 +220,30 @@ export const translations: Record<Locale, Translation> = {
       label: "Project",
       viewSite: "Live site",
       viewCode: "Code",
+      viewPage: "View page",
       featured: "Featured",
-      filters: { all: "All", web: "Web", mobile: "Mobile", desktop: "Desktop", iot: "IoT" },
+      filters: { all: "All", web: "Web", mobile: "Mobile", desktop: "Desktop", iot: "IoT", social: "Social media" },
       caseStudyLabels: { problem: "Challenge", solution: "Solution", delivered: "What I delivered" },
       items: [
+        {
+          id: "linhadefundo",
+          title: "Linha de Fundo",
+          description:
+            "Content management for a Mozambican sports page on Facebook: posts, visual identity and audience growth.",
+          tags: ["Facebook", "Content management", "Visual identity"],
+          caseStudy: {
+            problem:
+              "A Mozambican sports page with a few hundred followers and no recent activity needed to win back an audience.",
+            solution:
+              "I took over content management in September 2026, planning and publishing posts about Mozambican sport with a consistent visual identity across the artwork.",
+            delivered: [
+              "766,558 views in the first 16 days (18 Sep – 3 Oct 2026)",
+              "+3,699 net followers — about 90% of the page's current audience",
+              "24,607 interactions: reactions, comments and shares",
+              "Best day: 198,488 views and +564 followers on 22 September",
+            ],
+          },
+        },
         {
           id: "irrigation",
           title: "Marketing Digital Landing Page",
@@ -346,8 +367,8 @@ export const translations: Record<Locale, Translation> = {
           degree: "Content Management",
           school: "Linha de Fundo",
           description:
-            "Content management for a Facebook sports page with over 4,000 followers: planning and publishing posts.",
-          year: "2025 – Present",
+            "Content management for a Facebook sports page: +3,699 followers and 766,558 views in the first 16 days.",
+          year: "2026 – Present",
           kind: "work",
           link: "https://www.facebook.com/profile.php?id=100064196370490",
         },
@@ -478,10 +499,30 @@ export const translations: Record<Locale, Translation> = {
       label: "Projeto",
       viewSite: "Ver site",
       viewCode: "Código",
+      viewPage: "Ver página",
       featured: "Destaque",
-      filters: { all: "Todos", web: "Web", mobile: "Mobile", desktop: "Desktop", iot: "IoT" },
+      filters: { all: "Todos", web: "Web", mobile: "Mobile", desktop: "Desktop", iot: "IoT", social: "Redes sociais" },
       caseStudyLabels: { problem: "Desafio", solution: "Solução", delivered: "O que entreguei" },
       items: [
+        {
+          id: "linhadefundo",
+          title: "Linha de Fundo",
+          description:
+            "Gestão de conteúdos de uma página moçambicana de desporto no Facebook: publicações, identidade visual e crescimento da audiência.",
+          tags: ["Facebook", "Gestão de conteúdos", "Identidade visual"],
+          caseStudy: {
+            problem:
+              "Uma página moçambicana de desporto, com poucas centenas de seguidores e sem atividade recente, precisava de reconquistar audiência.",
+            solution:
+              "Assumi a gestão de conteúdos em setembro de 2026, com planeamento e publicação de conteúdos sobre o desporto moçambicano e uma identidade visual consistente nas artes.",
+            delivered: [
+              "766 558 visualizações nos primeiros 16 dias (18 set – 3 out 2026)",
+              "+3 699 seguidores líquidos — cerca de 90% da audiência atual da página",
+              "24 607 interações: reações, comentários e partilhas",
+              "Melhor dia: 198 488 visualizações e +564 seguidores a 22 de setembro",
+            ],
+          },
+        },
         {
           id: "irrigation",
           title: "Marketing Digital Landing Page",
@@ -604,8 +645,8 @@ export const translations: Record<Locale, Translation> = {
           degree: "Gestão de Conteúdos",
           school: "Linha de Fundo",
           description:
-            "Gestão de conteúdos de uma página de desporto no Facebook com mais de 4 000 seguidores: planeamento e publicação de publicações.",
-          year: "2025 – Presente",
+            "Gestão de conteúdos de uma página de desporto no Facebook: +3 699 seguidores e 766 558 visualizações nos primeiros 16 dias.",
+          year: "2026 – Presente",
           kind: "work",
           link: "https://www.facebook.com/profile.php?id=100064196370490",
         },
@@ -736,10 +777,30 @@ export const translations: Record<Locale, Translation> = {
       label: "Projet",
       viewSite: "Voir le site",
       viewCode: "Code",
+      viewPage: "Voir la page",
       featured: "À la une",
-      filters: { all: "Tous", web: "Web", mobile: "Mobile", desktop: "Desktop", iot: "IoT" },
+      filters: { all: "Tous", web: "Web", mobile: "Mobile", desktop: "Desktop", iot: "IoT", social: "Réseaux sociaux" },
       caseStudyLabels: { problem: "Défi", solution: "Solution", delivered: "Ce que j'ai livré" },
       items: [
+        {
+          id: "linhadefundo",
+          title: "Linha de Fundo",
+          description:
+            "Gestion du contenu d'une page sportive mozambicaine sur Facebook : publications, identité visuelle et croissance de l'audience.",
+          tags: ["Facebook", "Gestion de contenu", "Identité visuelle"],
+          caseStudy: {
+            problem:
+              "Une page sportive mozambicaine, avec quelques centaines d'abonnés et sans activité récente, devait reconquérir son audience.",
+            solution:
+              "J'ai repris la gestion du contenu en septembre 2026 : planification et publication de contenus sur le sport mozambicain, avec une identité visuelle cohérente dans les visuels.",
+            delivered: [
+              "766 558 vues sur les 16 premiers jours (18 sept. – 3 oct. 2026)",
+              "+3 699 abonnés nets — environ 90 % de l'audience actuelle de la page",
+              "24 607 interactions : réactions, commentaires et partages",
+              "Meilleure journée : 198 488 vues et +564 abonnés le 22 septembre",
+            ],
+          },
+        },
         {
           id: "irrigation",
           title: "Marketing Digital Landing Page",
@@ -862,8 +923,8 @@ export const translations: Record<Locale, Translation> = {
           degree: "Gestion de contenu",
           school: "Linha de Fundo",
           description:
-            "Gestion du contenu d'une page sportive sur Facebook de plus de 4 000 abonnés : planification et publication des posts.",
-          year: "2025 – Présent",
+            "Gestion du contenu d'une page sportive sur Facebook : +3 699 abonnés et 766 558 vues sur les 16 premiers jours.",
+          year: "2026 – Présent",
           kind: "work",
           link: "https://www.facebook.com/profile.php?id=100064196370490",
         },

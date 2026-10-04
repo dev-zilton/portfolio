@@ -5,7 +5,7 @@ import { AnimatedSection } from "../components/ui/AnimatedSection";
 import type { ProjectCategory } from "../data/portfolio";
 import type { Translation } from "../i18n/translations";
 
-const CATEGORY_ORDER: ProjectCategory[] = ["web", "mobile", "desktop", "iot"];
+const CATEGORY_ORDER: ProjectCategory[] = ["web", "mobile", "desktop", "iot", "social"];
 
 type Filter = ProjectCategory | "all";
 
