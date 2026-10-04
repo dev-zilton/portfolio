@@ -22,7 +22,7 @@ export const staticPortfolio = {
     {
       id: "frontend",
       items: [
-        { name: "HTML / CSS", icon: "html" },
+        { name: "HTML / CSS", icon: "html", daily: true },
         { name: "JavaScript", icon: "javascript" },
         { name: "React", icon: "react", daily: true },
         { name: "React Native", icon: "reactnative" },
@@ -60,7 +60,7 @@ export const staticPortfolio = {
     {
       id: "cloud",
       items: [
-        { name: "Vercel", icon: "vercel" },
+        { name: "Vercel", icon: "vercel", daily: true },
         { name: "AWS", icon: "aws" },
         { name: "Supabase", icon: "supabase" },
         { name: "M-Pesa / e-Mola", icon: "mpesa" },
