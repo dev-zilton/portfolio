@@ -226,21 +226,21 @@ export const translations: Record<Locale, Translation> = {
       caseStudyLabels: { problem: "Challenge", solution: "Solution", delivered: "What I delivered" },
       items: [
         {
-          id: "linhadefundo",
-          title: "Linha de Fundo",
+          id: "startuplanding",
+          title: "Soluções Digitais MZ",
           description:
-            "Content management for a Mozambican sports page on Facebook: posts, visual identity and audience growth.",
-          tags: ["Facebook", "Content management", "Visual identity"],
+            "Full corporate website for a digital agency in Mozambique, with dedicated sections for services, pricing, testimonials, FAQ and contact — built to convert visitors into clients.",
+          tags: ["Next.js", "TypeScript", "Tailwind CSS", "Resend"],
           caseStudy: {
             problem:
-              "A Mozambican sports page with a few hundred followers and no recent activity needed to win back an audience.",
+              "A digital agency in Mozambique needed a website that explains its services and prices clearly and brings in qualified requests from potential clients.",
             solution:
-              "I took over content management in September 2026, planning and publishing posts about Mozambican sport with a consistent visual identity across the artwork.",
+              "Next.js website with services, plans in meticais, testimonials, FAQ and a contact form that sends each request by email via Resend, plus a direct WhatsApp button.",
             delivered: [
-              "766,558 views in the first 16 days (18 Sep – 3 Oct 2026)",
-              "+3,699 net followers — about 90% of the page's current audience",
-              "24,607 interactions: reactions, comments and shares",
-              "Best day: 198,488 views and +564 followers on 22 September",
+              "Three plans with prices in MZN (Basic, Professional, Enterprise)",
+              "Contact form with service and budget, sent by email via Resend",
+              "WhatsApp button with a pre-filled message",
+              "Lazy-loaded sections below the fold, sitemap and SEO",
             ],
           },
         },
@@ -321,11 +321,23 @@ export const translations: Record<Locale, Translation> = {
           tags: ["React", "Tailwind CSS", "E-commerce"],
         },
         {
-          id: "startuplanding",
-          title: "Soluções Digitais MZ",
+          id: "linhadefundo",
+          title: "Linha de Fundo",
           description:
-            "Full corporate website for a digital agency in Mozambique, with dedicated sections for services, pricing, testimonials, FAQ and contact — built to convert visitors into clients.",
-          tags: ["Next.js", "React", "Tailwind CSS"],
+            "Content management for a Mozambican sports page on Facebook: posts, visual identity and audience growth.",
+          tags: ["Facebook", "Content management", "Visual identity"],
+          caseStudy: {
+            problem:
+              "A Mozambican sports page with a few hundred followers and no recent activity needed to win back an audience.",
+            solution:
+              "I took over content management in September 2026, planning and publishing posts about Mozambican sport with a consistent visual identity across the artwork.",
+            delivered: [
+              "766,558 views in the first 16 days (18 Sep – 3 Oct 2026)",
+              "+3,699 net followers — about 90% of the page's current audience",
+              "24,607 interactions: reactions, comments and shares",
+              "Best day: 198,488 views and +564 followers on 22 September",
+            ],
+          },
         },
         {
           id: "picasso",
@@ -505,21 +517,21 @@ export const translations: Record<Locale, Translation> = {
       caseStudyLabels: { problem: "Desafio", solution: "Solução", delivered: "O que entreguei" },
       items: [
         {
-          id: "linhadefundo",
-          title: "Linha de Fundo",
+          id: "startuplanding",
+          title: "Soluções Digitais MZ",
           description:
-            "Gestão de conteúdos de uma página moçambicana de desporto no Facebook: publicações, identidade visual e crescimento da audiência.",
-          tags: ["Facebook", "Gestão de conteúdos", "Identidade visual"],
+            "Website institucional completo para uma agência digital moçambicana, com secções de serviços, preços, depoimentos, FAQ e contacto — pensado para converter visitantes em clientes.",
+          tags: ["Next.js", "TypeScript", "Tailwind CSS", "Resend"],
           caseStudy: {
             problem:
-              "Uma página moçambicana de desporto, com poucas centenas de seguidores e sem atividade recente, precisava de reconquistar audiência.",
+              "Uma agência digital em Moçambique precisava de um site que explicasse com clareza os serviços e os preços e trouxesse pedidos qualificados de potenciais clientes.",
             solution:
-              "Assumi a gestão de conteúdos em setembro de 2026, com planeamento e publicação de conteúdos sobre o desporto moçambicano e uma identidade visual consistente nas artes.",
+              "Site em Next.js com serviços, planos em meticais, depoimentos, perguntas frequentes e formulário de contacto que envia cada pedido por email através do Resend, além de um botão direto para o WhatsApp.",
             delivered: [
-              "766 558 visualizações nos primeiros 16 dias (18 set – 3 out 2026)",
-              "+3 699 seguidores líquidos — cerca de 90% da audiência atual da página",
-              "24 607 interações: reações, comentários e partilhas",
-              "Melhor dia: 198 488 visualizações e +564 seguidores a 22 de setembro",
+              "Três planos com preços em MZN (Básico, Profissional, Empresarial)",
+              "Formulário com serviço e orçamento, enviado por email via Resend",
+              "Botão de WhatsApp com mensagem pré-preenchida",
+              "Secções abaixo da dobra carregadas sob demanda, sitemap e SEO",
             ],
           },
         },
@@ -600,11 +612,23 @@ export const translations: Record<Locale, Translation> = {
           tags: ["React", "Tailwind CSS", "E-commerce"],
         },
         {
-          id: "startuplanding",
-          title: "Soluções Digitais MZ",
+          id: "linhadefundo",
+          title: "Linha de Fundo",
           description:
-            "Website institucional completo para uma agência digital moçambicana, com secções de serviços, preços, depoimentos, FAQ e contacto — pensado para converter visitantes em clientes.",
-          tags: ["Next.js", "React", "Tailwind CSS"],
+            "Gestão de conteúdos de uma página moçambicana de desporto no Facebook: publicações, identidade visual e crescimento da audiência.",
+          tags: ["Facebook", "Gestão de conteúdos", "Identidade visual"],
+          caseStudy: {
+            problem:
+              "Uma página moçambicana de desporto, com poucas centenas de seguidores e sem atividade recente, precisava de reconquistar audiência.",
+            solution:
+              "Assumi a gestão de conteúdos em setembro de 2026, com planeamento e publicação de conteúdos sobre o desporto moçambicano e uma identidade visual consistente nas artes.",
+            delivered: [
+              "766 558 visualizações nos primeiros 16 dias (18 set – 3 out 2026)",
+              "+3 699 seguidores líquidos — cerca de 90% da audiência atual da página",
+              "24 607 interações: reações, comentários e partilhas",
+              "Melhor dia: 198 488 visualizações e +564 seguidores a 22 de setembro",
+            ],
+          },
         },
         {
           id: "picasso",
@@ -783,21 +807,21 @@ export const translations: Record<Locale, Translation> = {
       caseStudyLabels: { problem: "Défi", solution: "Solution", delivered: "Ce que j'ai livré" },
       items: [
         {
-          id: "linhadefundo",
-          title: "Linha de Fundo",
+          id: "startuplanding",
+          title: "Soluções Digitais MZ",
           description:
-            "Gestion du contenu d'une page sportive mozambicaine sur Facebook : publications, identité visuelle et croissance de l'audience.",
-          tags: ["Facebook", "Gestion de contenu", "Identité visuelle"],
+            "Site institutionnel complet pour une agence digitale mozambicaine, avec des sections dediees aux services, tarifs, temoignages, FAQ et contact — concu pour convertir les visiteurs en clients.",
+          tags: ["Next.js", "TypeScript", "Tailwind CSS", "Resend"],
           caseStudy: {
             problem:
-              "Une page sportive mozambicaine, avec quelques centaines d'abonnés et sans activité récente, devait reconquérir son audience.",
+              "Une agence digitale au Mozambique avait besoin d'un site présentant clairement ses services et ses tarifs, capable d'attirer des demandes qualifiées de clients potentiels.",
             solution:
-              "J'ai repris la gestion du contenu en septembre 2026 : planification et publication de contenus sur le sport mozambicain, avec une identité visuelle cohérente dans les visuels.",
+              "Site Next.js avec les services, des offres en meticais, des témoignages, une FAQ et un formulaire de contact qui envoie chaque demande par e-mail via Resend, ainsi qu'un bouton WhatsApp direct.",
             delivered: [
-              "766 558 vues sur les 16 premiers jours (18 sept. – 3 oct. 2026)",
-              "+3 699 abonnés nets — environ 90 % de l'audience actuelle de la page",
-              "24 607 interactions : réactions, commentaires et partages",
-              "Meilleure journée : 198 488 vues et +564 abonnés le 22 septembre",
+              "Trois offres avec prix en MZN (Basique, Professionnel, Entreprise)",
+              "Formulaire avec service et budget, envoyé par e-mail via Resend",
+              "Bouton WhatsApp avec message pré-rempli",
+              "Sections sous la ligne de flottaison chargées à la demande, sitemap et SEO",
             ],
           },
         },
@@ -878,11 +902,23 @@ export const translations: Record<Locale, Translation> = {
           tags: ["React", "Tailwind CSS", "E-commerce"],
         },
         {
-          id: "startuplanding",
-          title: "Soluções Digitais MZ",
+          id: "linhadefundo",
+          title: "Linha de Fundo",
           description:
-            "Site institutionnel complet pour une agence digitale mozambicaine, avec des sections dediees aux services, tarifs, temoignages, FAQ et contact — concu pour convertir les visiteurs en clients.",
-          tags: ["Next.js", "React", "Tailwind CSS"],
+            "Gestion du contenu d'une page sportive mozambicaine sur Facebook : publications, identité visuelle et croissance de l'audience.",
+          tags: ["Facebook", "Gestion de contenu", "Identité visuelle"],
+          caseStudy: {
+            problem:
+              "Une page sportive mozambicaine, avec quelques centaines d'abonnés et sans activité récente, devait reconquérir son audience.",
+            solution:
+              "J'ai repris la gestion du contenu en septembre 2026 : planification et publication de contenus sur le sport mozambicain, avec une identité visuelle cohérente dans les visuels.",
+            delivered: [
+              "766 558 vues sur les 16 premiers jours (18 sept. – 3 oct. 2026)",
+              "+3 699 abonnés nets — environ 90 % de l'audience actuelle de la page",
+              "24 607 interactions : réactions, commentaires et partages",
+              "Meilleure journée : 198 488 vues et +564 abonnés le 22 septembre",
+            ],
+          },
         },
         {
           id: "picasso",

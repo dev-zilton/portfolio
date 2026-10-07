@@ -98,7 +98,7 @@ export const staticPortfolio = {
       category: "web",
       featured: true,
       site: "https://dripgod.vercel.app/",
-      image: publicAsset("dripgod.png"),
+      image: publicAsset("dripgod.webp"),
       livePreview: true,
     },
     {
@@ -106,7 +106,8 @@ export const staticPortfolio = {
       icon: "landmark",
       category: "web",
       featured: true,
-      // O site (matola-digital.vercel.app) está em 404 — volta a pôr `site` e `livePreview` quando for republicado.
+      // Sem livePreview: o site envia X-Frame-Options: DENY e não pode ser incorporado.
+      site: "https://matola-digital.vercel.app/",
       repo: "https://github.com/dev-zilton/matola-digital",
       image: publicAsset("matola-digital.webp"),
     },
@@ -114,7 +115,6 @@ export const staticPortfolio = {
       id: "linhadefundo",
       icon: "trophy",
       category: "social",
-      featured: true,
       site: "https://www.facebook.com/profile.php?id=100064196370490",
       image: publicAsset("linha-de-fundo.webp"),
     },
@@ -139,6 +139,7 @@ export const staticPortfolio = {
       id: "startuplanding",
       icon: "rocket",
       category: "web",
+      featured: true,
       site: "https://startup-website-build.vercel.app/",
       repo: "https://github.com/dev-zilton/startup-website-build",
       image: publicAsset("startuplanding.png"),
