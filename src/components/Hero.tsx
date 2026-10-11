@@ -31,7 +31,7 @@ export function Hero({ onContact }: HeroProps) {
               {t.hero.available}
             </div>
 
-            <h1 className="text-5xl font-extrabold leading-[1.05] tracking-tight md:text-7xl lg:text-8xl">
+            <h1 className="text-4xl font-extrabold leading-[1.05] tracking-tight sm:text-5xl md:text-7xl lg:text-8xl">
               <span className="text-gradient-primary">
                 {t.hero.hi} {staticPortfolio.firstName}
               </span>{" "}
@@ -105,7 +105,8 @@ export function Hero({ onContact }: HeroProps) {
               <div className="absolute inset-0 scale-105 rotate-12 rounded-[40%_60%_70%_30%_/_40%_60%_30%_70%] bg-gradient-to-br from-turquoise-400/25 to-accent-purple/25 blur-2xl pointer-events-none" />
 
               {/* IMAGE */}
-              <div className="relative h-full w-full overflow-hidden rounded-[40%_60%_70%_30%_/_40%_60%_30%_70%] border-2 border-turquoise-400/35 shadow-glow-turquoise-soft">
+              {/* isolate + máscara: sem isto o Safari do iPhone não recorta a foto animada pela forma arredondada. */}
+              <div className="relative isolate h-full w-full overflow-hidden [-webkit-mask-image:-webkit-radial-gradient(white,black)] rounded-[40%_60%_70%_30%_/_40%_60%_30%_70%] border-2 border-turquoise-400/35 shadow-glow-turquoise-soft">
                 <img
                   src={profileImage}
                   alt={staticPortfolio.name}
